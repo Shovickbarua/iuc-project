@@ -1,0 +1,28 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+
+
+  body{
+    background-color: #E1EBEE;
+  }
+  .register-container {
+    margin-top: 50px;
+  }
+  
+  .register-card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+  
+  .register-header {
+    font-weight: bold;
+  }
+  
+  .register-body {
+    padding: 30px;
+  }
+  

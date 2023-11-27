@@ -1,0 +1,25 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+
+}
+body{
+  background-color: #E1EBEE;
+}
+/* Custom Styles */
+body {
+    font-family: "Arial", sans-serif;
+  }
+  
+  /* .container {
+    max-width: 800px;
+  } */
+  
+  .table {
+    margin-top: 20px;
+  }
+  
+  /* You can add more CSS styling here if needed */
+  

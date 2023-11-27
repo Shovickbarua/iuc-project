@@ -1,0 +1,257 @@
+*{
+  
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+
+
+}
+:root{
+    --bg-color:#E1EBEE;
+}
+
+/* sliderimage */
+.carousel-caption{
+        padding-bottom:210px;
+        color:#ffffff;
+        font-size: 30px;
+        font-weight: bold;
+        font-family:"Playfair Display", serif;
+ }
+
+.slider-title{
+    padding-bottom:2px;
+    color: #000000;
+    font-size: 55px;
+    font-weight: bold;
+    font-family: "Playfair Display", serif;
+}
+
+.slider-img {  
+    width: 100%;
+    height: 610px;
+    object-fit: cover;
+}
+
+
+.slider-arrow{
+   background-color: black;
+}
+.slider-arrow:hover{
+    color: black;
+}
+
+
+
+
+
+
+/* rooms */
+
+.room-section-heading {
+    font-size: 34px;
+    font-weight: bold;
+    font-family: "Playfair Display", serif;
+    color: rgb(10, 0, 0);
+  }
+  
+  .room-section-heading:after {
+   content: '';
+   width: 90px;
+   position: absolute;
+   left: 45%;
+   margin-bottom: 10px;
+   display: block;
+   border-bottom: 2px solid #c5874e;
+  }
+  
+  .our-room-section-site{
+    padding: 4rem;
+    background: var(--bg-color);
+  }
+  
+       .roomcard-title{
+        margin-top: 10px;
+        padding-left: 15px;
+        font-size: 24px;
+        font-weight: bold;
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        color: #010300;
+       }
+  .roomcard-text1{
+    padding-left: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+  }
+  .roomcard-text2{
+    margin-bottom: 10px;
+    color: #c5874e;
+    font-size: 22px;
+    font-weight: bold;
+     padding-left: 15px;
+  }
+  .roomcard-text3{
+    position: absolute;
+    bottom:1%;
+    color: #010300;
+    font-size: 13px;
+    font-weight: bold;
+   padding-left: 15px;
+  }
+  
+  .hotel-room{
+    height: 360px;
+    width: 100%;
+    background:#ffffff;
+    cursor: pointer;
+    transition: transform 0.8s ease-in-out;
+  }
+  
+  .hotel-room:hover {         
+    transform: scale(0.9);
+  }
+  
+  .homeourimage-card{
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+  }
+
+
+
+
+
+
+/* about us */
+
+.about-us {
+    background:var(--bg-color);
+    padding-bottom: 5rem;
+    font-family: 'Poppins';
+}
+
+.about-us img {
+    padding-top:30px;
+    padding-bottom: 10px;
+    width: 90%;
+}
+
+.about-us h2 {
+    padding-bottom: 5px;
+    padding-left: 0px;
+    font-size: 34px;
+    font-weight: bold;
+    font-family:"Playfair Display", serif;
+    color: rgb(15, 0, 0);
+}
+
+
+.about-us h2:after{
+    content: '';
+    width: 80px;        
+    position: absolute;
+    left: 20px;
+    margin-bottom: 10px;
+    display: block;
+    border-bottom: 2px solid #c5874e;
+}
+
+.about-us p {
+    font-size: 18px;
+    color:black;
+}
+
+/* Services */
+.services-title{
+    padding-bottom: 75px;
+    padding-left: 0px;
+    font-size: 34px;
+    font-family: "Playfair Display", serif;
+    font-weight: bold;
+    color: rgb(15, 0, 0);
+}
+.services-title:after{
+    content: '';
+    width: 250px;        
+    position: absolute;
+    left: 40%;
+    margin-bottom: 5px;
+    display: block;
+    border-bottom: 2px solid #c5874e;
+}
+
+
+.home-services{
+    background:var(--bg-color);
+}
+.services-card {
+    width: 300px;
+    padding: 0px 0px;
+    margin: 0 auto;
+    background-color: rgb(255, 255, 255);
+    border-radius: 0px ;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+  }
+
+.services-card-title {
+    margin-top: 5px;
+    font-family:serif;
+    font-size: 25px;
+    padding-left: 10px;
+}
+.services-view{
+    text-decoration: none;
+    color: #c5874e;
+    font-size: 20px;
+    padding-left: 10px;
+}
+.services-view:hover{
+    color: #c5874e;
+    text-decoration: none;
+}
+
+
+    /* location */
+
+
+    
+    .home-map-size{
+        margin-top: 20px;
+       
+       
+        
+    } 
+    
+    .home-map{
+        background:var(--bg-color);
+    }
+    .homemap-title{
+        font-size: 34px;
+        font-family: "Playfair Display", serif;
+        font-weight: bold;
+        color: rgb(15, 0, 0);
+    }
+    
+    .homemap-title:after{
+        content: '';
+        width: 80px;        
+        position: absolute;
+        left: 47%;
+        margin-bottom: 5px;
+        display: block;
+        border-bottom: 2px solid #c5874e;
+    }
+    .hopemap-details{
+    font-size: 18px;
+    padding-bottom: 30px;
+    }
+    
+
+
+
+
+
+
+

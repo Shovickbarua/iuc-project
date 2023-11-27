@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  body{
+    background-color: #E1EBEE;
+  }
+  .login-container {
+    margin-top: 50px;
+  }
+  
+  .login-card {
+    margin-top: 50px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+  
+  .login-header {
+    font-weight: bold;
+  }
+  
+  .login-body {
+    padding: 30px;
+  }
+  
