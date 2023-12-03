@@ -71,7 +71,7 @@
     <div class="hotel-room">
       <img src="{{asset('/')}}dist/asset/image/single room.jpg" class="homeourimage-card" alt="Single Room">
       <div class="hotel-room-body">
-        <a class="roomcard-title" href="rooms.html#rooms-section1" style="text-decoration: none;">Single Room</a>
+        <a class="roomcard-title" href="{{ url('/room#rooms-section1') }}" style="text-decoration: none;">Single Room</a>
         <p class="roomcard-text1">Cozy and comfortable single room.</p>
         <p class="roomcard-text2">$100</p>
         <p class="roomcard-text3 my-2">Per Night</p>
@@ -82,7 +82,7 @@
       <div class="hotel-room">
         <img src="{{asset('/')}}dist/asset/image/deluxe room.jpg" class="homeourimage-card" alt="Single Room">
         <div class="hotel-room-body">
-          <a class="roomcard-title" href="rooms.html#rooms-section2" style="text-decoration: none;">Deluxe Room</a>
+          <a class="roomcard-title" href="{{ url('/room#rooms-section2') }}" style="text-decoration: none;">Deluxe Room</a>
           <p class="roomcard-text1">Cozy and comfortable single room.</p>
           <p class="roomcard-text2">$200</p>
           <p class="roomcard-text3 my-2">Per Night</p>
@@ -93,7 +93,7 @@
         <div class="hotel-room">
           <img src="{{asset('/')}}dist/asset/image/couple-room.jpg" class="homeourimage-card" alt="Single Room">
           <div class="hotel-room-body">
-            <a class="roomcard-title"  href="rooms.html#rooms-section3" style="text-decoration: none;">Couple Room</a>
+            <a class="roomcard-title"  href="{{ url('/room#rooms-section3') }}" style="text-decoration: none;">Couple Room</a>
             <p class="roomcard-text1">Cozy and comfortable single room.</p>
             <p class="roomcard-text2">$300</p>
             <p class="roomcard-text3 my-2">Per Night</p>
@@ -104,7 +104,7 @@
           <div class="hotel-room">
             <img src="{{asset('/')}}dist/asset/image/family room.jpg" class="homeourimage-card" alt="Single Room">
             <div class="hotel-room-body">
-              <a class="roomcard-title" href="rooms.html#rooms-section4" style="text-decoration: none;">Presidental Suite</a>
+              <a class="roomcard-title" href="{{ url('/room#rooms-section4') }}" style="text-decoration: none;">Presidental Suite</a>
               <p class="roomcard-text1">Cozy and comfortable single room.</p>
               <p class="roomcard-text2">$500</p>
               <p class="roomcard-text3 my-2">Per Night</p>
@@ -115,7 +115,7 @@
           <div class="hotel-room">
             <img src="{{asset('/')}}dist/asset/image/room-image1.jpg" class="homeourimage-card" alt="Single Room">
             <div class="hotel-room-body">
-              <a class="roomcard-title" href="rooms.html#rooms-section5" style="text-decoration: none;">Royal Suite</a>
+              <a class="roomcard-title" href="{{ url('/room#rooms-section5') }}" style="text-decoration: none;">Royal Suite</a>
               <p class="roomcard-text1">Cozy and comfortable single room.</p>
               <p class="roomcard-text2">$600</p>
               <p class="roomcard-text3 my-2">Per Night</p>
@@ -126,7 +126,7 @@
           <div class="hotel-room">
             <img src="{{asset('/')}}dist/asset/image/luxary room.jpg" class="homeourimage-card" alt="Single Room">
             <div class="hotel-room-body">
-              <a class="roomcard-title" href="rooms.html#rooms-section6" style="text-decoration: none;">Executive Suite</a>
+              <a class="roomcard-title" href="{{ url('/room#rooms-section6') }}" style="text-decoration: none;">Executive Suite</a>
               <p class="roomcard-text1">Cozy and comfortable single room.</p>
               <p class="roomcard-text2">$800</p>
               <p class="roomcard-text3 my-2">Per Night</p>
@@ -161,7 +161,7 @@
                 <img src="{{asset('/')}}dist/asset/image/swimming pool.jpeg" class="card-img-top services-image" alt="Service 1">
                 <div class="services-card-body">
                     <h5 class="services-card-title">The Infinity Pool</h5>
-                    <a href="services.html#service-section1" class="services-view">View More</a>
+                    <a href="{{ url('/service#service-section1') }}" class="services-view">View More</a>
                 </div>
             </div> 
         </div>
@@ -170,7 +170,7 @@
                 <img src="{{asset('/')}}dist/asset/image/restaurant.jpg" class="card-img-top services-image" alt="Service 2">
                 <div class="services-card-body">
                     <h5 class="services-card-title">Restaurant</h5>
-                    <a href="services.html#service-section2" class="services-view">View More</a>
+                    <a href="{{ url('/service#service-section2') }}" class="services-view">View More</a>
                 </div>
             </div>
         </div>
@@ -179,7 +179,7 @@
                 <img src="{{asset('/')}}dist/asset/image/gym (2).jpg" class="card-img-top services-image" alt="Service 3">
                 <div class="services-card-body">
                     <h5 class="services-card-title ">Gym</h5>
-                    <a href="services.html#service-section3" class="services-view">View More</a>
+                    <a href="{{ url('/service#service-section3') }}" class="services-view">View More</a>
                 </div>
             </div>
         </div>
@@ -188,7 +188,7 @@
               <img src="{{asset('/')}}dist/asset/image/Biliard zone.jpg" class="card-img-top services-image" alt="Service 3">
               <div class="services-card-body">
                   <h5 class="services-card-title ">Billiard Zone</h5>
-                  <a href="services.html#service-section4" class="services-view">View More</a>
+                  <a href="{{ url('/service#service-section4') }}" class="services-view">View More</a>
               </div>
           </div>
         </div>
