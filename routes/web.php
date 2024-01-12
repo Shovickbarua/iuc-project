@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\StripePaymentController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 /*
@@ -28,4 +29,10 @@ Route::get('/admin/booking-list',[AuthController::class,'getBooking'])->name('bo
 Route::get('/admin/contact-list',[AuthController::class,'getContact'])->name('contact-list');
 
 Route::resource('/auth',AuthController::class);
+
+Route::controller(StripePaymentController::class)->group(function(){
+    Route::get('stripe', 'stripe')->name('stripe.form');
+    Route::post('stripe', 'stripePost')->name('stripe.post');
+
+});
 

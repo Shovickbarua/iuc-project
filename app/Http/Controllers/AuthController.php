@@ -68,7 +68,7 @@ class AuthController extends Controller
         $book-> checkOutDate = $request->checkOutDate;  
         $book-> save();
 
-        return redirect(route("room"));
+        return redirect(route("stripe.form"));
     }
 
     /**
