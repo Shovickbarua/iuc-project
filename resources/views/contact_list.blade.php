@@ -21,15 +21,15 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
         @foreach($contacts as $contact)
+        <tr>
           <td scope="row">{{$loop->iteration}}</td>
           <td>{{$contact->name}}</td>
           <td>{{$contact->email}}</td>
           <td>{{$contact->subject}}</td>
           <td>{{$contact->message}}</td>
-        @endforeach
         </tr>
+        @endforeach
         <!-- Add more rows here -->
       </tbody>
     </table>

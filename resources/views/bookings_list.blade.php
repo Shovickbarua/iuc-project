@@ -23,8 +23,9 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
+        
         @foreach($bookings as $booking)
+        <tr>
           <td scope="row">{{$loop->iteration}}</td>
           <td>{{$booking->name}}</td>
           <td>{{$booking->email}}</td>
@@ -32,8 +33,8 @@
           <td>{{$booking->roomcategory}}</td>
           <td>{{$booking->checkInDate}}</td>
           <td>{{$booking->checkOutDate}}</td>
-          @endforeach
         </tr>
+          @endforeach
         <!-- Add more rows here -->
       </tbody>
     </table>
