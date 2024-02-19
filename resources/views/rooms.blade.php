@@ -97,16 +97,24 @@
                         <div class="form-group">
                             <input type="email"  placeholder="Enter your email" name="email" class="form-control" id="email" required>
                         </div>
-        
+                        
+                        <div class="form-group">
+                          <input type="text"  placeholder="" name="room" class="form-control" id="" value="Single" readonly>
+                        </div>
+                        
+                        <div class="form-group">
+                          <label for="price" class="reserve-label">Price </label>
+                            <input type="text"  placeholder="" name="price" class="form-control" id="" value="100" readonly>
+                        </div>
         
         
                         <div class="form-group">
                           <label for="roomcategory" class="reserve-label">Room NO </label>
                           <select class="form-control" name="roomcategory" id="roomcategory" required>
-                              <option value="Normal">1</option>
-                              <option value="Standered">2</option>
-                              <option value="Premium">3</option>
-                              <option value="Super Premium">4</option>
+                              <option value="1">1</option>
+                              <option value="2">2</option>
+                              <option value="3">3</option>
+                              <option value="4">4</option>
                           </select>
                         </div>
         
@@ -282,13 +290,13 @@
               <button class="roomdetails-btn" id="showDetails2">ROOM DETAILS</button>
             </div>
             <div class="col-lg-5 roombook ">
-              <button  type="button" class=" roombook-btn" data-toggle="modal" data-target="#reservationModal">Book Now</button>
+              <button  type="button" class=" roombook-btn" data-toggle="modal" data-target="#reservationModal2">Book Now</button>
             </div>
           </div>
         </div>
   
         <!-- reservation -->
-        <div class="modal fade" id="reservationModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="reservationModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         
   
           <div class="modal-dialog" role="document">
@@ -312,16 +320,25 @@
                         <div class="form-group">
                             <input type="email"  placeholder="Enter your email" name="email" class="form-control" id="email" required>
                         </div>
+
+                        <div class="form-group">
+                          <input type="text"  placeholder="" name="room" class="form-control" id="" value="Deluxe" readonly>
+                        </div>
+
+                        <div class="form-group">
+                          <label for="price" class="reserve-label">Price </label>
+                            <input type="text"  placeholder="" name="price" class="form-control" id="" value="200" readonly>
+                        </div>
         
         
         
                         <div class="form-group">
                           <label for="roomcategory" class="reserve-label">Room No </label>
                           <select class="form-control" name="roomcategory" id="roomcategory" required>
-                              <option value="Normal">1</option>
-                              <option value="Standered">2</option>
-                              <option value="Premium">3</option>
-                              <option value="Super Premium">4</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
                           </select>
                         </div>
         
@@ -501,13 +518,13 @@
                       <button class="roomdetails-btn" id="showDetails3">ROOM DETAILS</button>
                     </div>
                     <div class="col-lg-5 roombook ">
-                      <button  type="button" class=" roombook-btn" data-toggle="modal" data-target="#reservationModal">Book Now</button>
+                      <button  type="button" class=" roombook-btn" data-toggle="modal" data-target="#reservationModal2">Book Now</button>
                     </div>
                   </div>
                 </div>
             
                 <!-- reservation -->
-                <div class="modal fade" id="reservationModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal fade" id="reservationModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 
                   
                   <div class="modal-dialog" role="document">
@@ -531,16 +548,25 @@
                                 <div class="form-group">
                                     <input type="email"  placeholder="Enter your email" name="email" class="form-control" id="email" required>
                                 </div>
+
+                                <div class="form-group">
+                                  <input type="text"  placeholder="" name="room" class="form-control" id="" value="Couple" readonly>
+                                </div>
+
+                                <div class="form-group">
+                                  <label for="price" class="reserve-label">Price </label>
+                                    <input type="text"  placeholder="" name="price" class="form-control" id="" value="300" readonly>
+                                </div>
                 
                 
                 
                                 <div class="form-group">
                                   <label for="roomcategory" class="reserve-label">Room No </label>
                                   <select class="form-control" name="roomcategory" id="roomcategory" required>
-                                      <option value="Normal">1</option>
-                                      <option value="Standered">2</option>
-                                      <option value="Premium">3</option>
-                                      <option value="Super Premium">4</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
                                   </select>
                                 </div>
                 
@@ -714,13 +740,13 @@
                 <button class="roomdetails-btn" id="showDetails4">ROOM DETAILS</button>
               </div>
               <div class="col-lg-5 roombook ">
-                <button  type="button" class=" roombook-btn" data-toggle="modal" data-target="#reservationModal">Book Now</button>
+                <button  type="button" class=" roombook-btn" data-toggle="modal" data-target="#reservationModal5">Book Now</button>
               </div>
             </div>
           </div>
       
           <!-- reservation -->
-          <div class="modal fade" id="reservationModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal fade" id="reservationModal5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
           
       
             <div class="modal-dialog" role="document">
@@ -745,17 +771,25 @@
                           <div class="form-group">
                               <input type="email"  placeholder="Enter your email" name="email" class="form-control" id="email" required>
                           </div>
+
+                          <div class="form-group">
+                            <input type="text"  placeholder="" name="room" class="form-control" id="" value="Presidental Suite" readonly>
+                          </div>
+
+                          <div class="form-group">
+                            <label for="price" class="reserve-label">Price </label>
+                              <input type="text"  placeholder="" name="price" class="form-control" id="" value="500" readonly>
+                          </div>
           
           
           
                           <div class="form-group">
                             <label for="roomcategory" class="reserve-label">Room No </label>
                             <select class="form-control" name="roomcategory" id="roomcategory" required>
-                                <option value="Normal">1</option>
-                                <option value="Standered">2</option>
-                                <option value="Premium">3</option>
-                                <option value="Super Premium">4</option>
-                                <option value="Queen">Queen</option>
+                              <option value="1">1</option>
+                              <option value="2">2</option>
+                              <option value="3">3</option>
+                              <option value="4">4</option>
                             </select>
                           </div>
           
@@ -927,13 +961,13 @@
               <button class="roomdetails-btn" id="showDetails5">ROOM DETAILS</button>
             </div>
             <div class="col-lg-5 roombook ">
-              <button  type="button" class=" roombook-btn" data-toggle="modal" data-target="#reservationModal">Book Now</button>
+              <button  type="button" class=" roombook-btn" data-toggle="modal" data-target="#reservationModal6">Book Now</button>
             </div>
           </div>
         </div>
   
         <!-- reservation -->
-        <div class="modal fade" id="reservationModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="reservationModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel6" aria-hidden="true">
         
   
           <div class="modal-dialog" role="document">
@@ -958,16 +992,25 @@
                         <div class="form-group">
                             <input type="email"  placeholder="Enter your email" name="email" class="form-control" id="email" required>
                         </div>
+
+                        <div class="form-group">
+                          <input type="text"  placeholder="" name="room" class="form-control" id="" value="Royal Suite" readonly>
+                        </div>
+
+                        <div class="form-group">
+                          <label for="price" class="reserve-label">Price </label>
+                            <input type="text"  placeholder="" name="price" class="form-control" id="" value="600" readonly>
+                        </div>
         
         
         
                         <div class="form-group">
                           <label for="roomcategory" class="reserve-label">Room No </label>
                           <select class="form-control" name="roomcategory" id="roomcategory" required>
-                              <option value="Normal">1</option>
-                              <option value="Standered">2</option>
-                              <option value="Premium">3</option>
-                              <option value="Super Premium">4</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
                           </select>
                         </div>
         
@@ -1141,13 +1184,13 @@
             <button class="roomdetails-btn" id="showDetails6">ROOM DETAILS</button>
           </div>
           <div class="col-lg-5 roombook ">
-            <button  type="button" class=" roombook-btn" data-toggle="modal" data-target="#reservationModal">Book Now</button>
+            <button  type="button" class=" roombook-btn" data-toggle="modal" data-target="#reservationModal8">Book Now</button>
           </div>
         </div>
       </div>
   
       <!-- reservation -->
-      <div class="modal fade" id="reservationModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal fade" id="reservationModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel8" aria-hidden="true">
       
   
         <div class="modal-dialog" role="document">
@@ -1172,17 +1215,25 @@
                       <div class="form-group">
                           <input type="email"  placeholder="Enter your email" name="email" class="form-control" id="email" required>
                       </div>
+
+                      <div class="form-group">
+                        <input type="text"  placeholder="" name="room" class="form-control" id="" value="Executive Suite" readonly>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="price" class="reserve-label">Price </label>
+                          <input type="text"  placeholder="" name="price" class="form-control" id="" value="800" readonly>
+                      </div>
       
       
       
                       <div class="form-group">
                         <label for="roomcategory" class="reserve-label">Room No </label>
                         <select class="form-control" name="roomcategory" id="roomcategory" required>
-                            <option value="Normal">1</option>
-                            <option value="Standered">2</option>
-                            <option value="Premium">3</option>
-                            <option value="Super Premium">4</option>
-                            <option value="Queen">Queen</option>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
                         </select>
                       </div>
       

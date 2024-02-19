@@ -17,6 +17,8 @@ return new class extends Migration
             $table->string('email');
             $table->string('phone_number');
             $table->string('roomcategory');
+            $table->string('room');
+            $table->string('price');
             $table->date('checkInDate');
             $table->date('checkOutDate');
             $table->timestamps();

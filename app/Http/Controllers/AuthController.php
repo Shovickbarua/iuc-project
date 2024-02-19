@@ -64,9 +64,20 @@ class AuthController extends Controller
         $book-> email = $request->email;  
         $book-> phone_number = $request->phone_number;  
         $book-> roomcategory = $request->roomcategory;  
+        $book-> room = $request->room;  
+        // dd($request->price);
+        $book-> price = $request->price;  
         $book-> checkInDate = $request->checkInDate;  
         $book-> checkOutDate = $request->checkOutDate;  
         $book-> save();
+
+        session([
+            'name' => $request->name,
+            'email' => $request->email,
+            'phone' => $request->phone_number,
+            'room' => $request->room,
+            'price' => $request->price,
+        ]);
 
         return redirect(route("stripe.form"));
     }

@@ -18,6 +18,8 @@
           <th scope="col">Email</th>
           <th scope="col">Phone No.</th>
           <th scope="col">Room</th>
+          <th scope="col">Price</th>
+          <th scope="col">Type</th>
           <th scope="col">Check-in Date</th>
           <th scope="col">Check-out Date</th>
         </tr>
@@ -31,6 +33,8 @@
           <td>{{$booking->email}}</td>
           <td>{{$booking->phone_number}}</td>
           <td>{{$booking->roomcategory}}</td>
+          <td>{{$booking->price}}</td>
+          <td>{{$booking->room}}</td>
           <td>{{$booking->checkInDate}}</td>
           <td>{{$booking->checkOutDate}}</td>
         </tr>

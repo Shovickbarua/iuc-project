@@ -40,19 +40,19 @@ class StripePaymentController extends Controller
                     "postal_code" => "360001",
                     "city" => "Rajkot",
                     "state" => "GJ",
-                    "country" => "IN",
+                    "country" => "BD",
                 ],
-            "email" => "demo@gmail.com",
-            "name" => "Hardik Savani",
+            "email" => session('email'),
+            "name" => session('name'),
             "source" => $request->stripeToken
          ));
     Stripe\Charge::create ([
-            "amount" => 100 * 100,
+            "amount" => session('price')* 100,
             "currency" => "usd",
             "customer" => $customer->id,
             "description" => "Test payment from itsolutionstuff.com.",
             "shipping" => [
-              "name" => "Jenny Rosen",
+              "name" => session('name'),
               "address" => [
                 "line1" => "510 Townsend St",
                 "postal_code" => "98140",
