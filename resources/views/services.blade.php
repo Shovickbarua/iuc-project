@@ -70,14 +70,14 @@
 
                     <a class="carousel-control-prev " href="#serviceCarousel2"  role="button" data-slide="prev">
                       <span class="carousel-control-prev-icon slider-arrow" aria-hidden="true"></span>
-                      <span class="visually-hidden">Previous</span>
+                      <span class="visually-hidden d-none">Previous</span>
                     </a>
 
 
 
                     <a class="carousel-control-next" href="#serviceCarousel2"  role="button" data-slide="next">
                       <span class="carousel-control-next-icon slider-arrow" aria-hidden="true"></span>
-                      <span class="visually-hidden">Next</span>
+                      <span class="visually-hidden d-none">Next</span>
                     </a>
 
 
@@ -154,14 +154,14 @@
 
                     <a class="carousel-control-prev " href="#serviceCarousel1"  role="button" data-slide="prev">
                       <span class="carousel-control-prev-icon slider-arrow" aria-hidden="true"></span>
-                      <span class="visually-hidden">Previous</span>
+                      <span class="visually-hidden d-none">Previous</span>
                     </a>
 
 
 
                     <a class="carousel-control-next" href="#serviceCarousel1"  role="button" data-slide="next">
                       <span class="carousel-control-next-icon slider-arrow" aria-hidden="true"></span>
-                      <span class="visually-hidden">Next</span>
+                      <span class="visually-hidden d-none">Next</span>
                     </a>
 
 
@@ -249,14 +249,14 @@
 
                     <a class="carousel-control-prev " href="#serviceCarousel3"  role="button" data-slide="prev">
                       <span class="carousel-control-prev-icon slider-arrow" aria-hidden="true"></span>
-                      <span class="visually-hidden">Previous</span>
+                      <span class="visually-hidden d-none">Previous</span>
                     </a>
 
 
 
                     <a class="carousel-control-next" href="#serviceCarousel3"  role="button" data-slide="next">
                       <span class="carousel-control-next-icon slider-arrow" aria-hidden="true"></span>
-                      <span class="visually-hidden">Next</span>
+                      <span class="visually-hidden d-none">Next</span>
                     </a>
 
 
@@ -324,13 +324,13 @@
 
                     <a class="carousel-control-prev " href="#serviceCarousel4"  role="button" data-slide="prev">
                       <span class="carousel-control-prev-icon slider-arrow" aria-hidden="true"></span>
-                      <span class="visually-hidden">Previous</span>
+                      <span class="visually-hidden d-none">Previous</span>
                     </a>
 
 
                     <a class="carousel-control-next" href="#serviceCarousel4"  role="button" data-slide="next">
                       <span class="carousel-control-next-icon slider-arrow" aria-hidden="true"></span>
-                      <span class="visually-hidden">Next</span>
+                      <span class="visually-hidden d-none">Next</span>
                     </a>
 
 
@@ -419,14 +419,14 @@
 
                 <a class="carousel-control-prev " href="#serviceCarousel5"  role="button" data-slide="prev">
                   <span class="carousel-control-prev-icon slider-arrow" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
+                  <span class="visually-hidden d-none">Previous</span>
                 </a>
 
 
 
                 <a class="carousel-control-next" href="#serviceCarousel5"  role="button" data-slide="next">
                   <span class="carousel-control-next-icon slider-arrow" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
+                  <span class="visually-hidden d-none">Next</span>
                 </a>
 
 
@@ -505,14 +505,14 @@
 
                     <a class="carousel-control-prev " href="#serviceCarousel6"  role="button" data-slide="prev">
                       <span class="carousel-control-prev-icon slider-arrow" aria-hidden="true"></span>
-                      <span class="visually-hidden">Previous</span>
+                      <span class="visually-hidden d-none">Previous</span>
                     </a>
 
 
 
                     <a class="carousel-control-next" href="#serviceCarousel6"  role="button" data-slide="next">
                       <span class="carousel-control-next-icon slider-arrow" aria-hidden="true"></span>
-                      <span class="visually-hidden">Next</span>
+                      <span class="visually-hidden d-none">Next</span>
                     </a>
 
 

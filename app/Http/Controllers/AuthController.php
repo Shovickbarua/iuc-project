@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Auth;
 use App\Models\Booking;
 use App\Models\Contact;
+use App\Models\Room;
 use Illuminate\Http\Request;
 
 class AuthController extends Controller
@@ -18,7 +19,13 @@ class AuthController extends Controller
     }
     public function room()
     {
-        return view("rooms");
+        $froom = Room::where('name', 'single-room')->first(); 
+        $droom = Room::where('name', 'deluxe-room')->first(); 
+        $croom = Room::where('name', 'couple-room')->first(); 
+        $proom = Room::where('name', 'presidential-room')->first(); 
+        $rroom = Room::where('name', 'royal-suite')->first(); 
+        $eroom = Room::where('name', 'executive-suite')->first(); 
+        return view('rooms',compact('froom', 'droom', 'croom', 'proom', 'rroom', 'eroom')); 
     }
     public function gallery()
     {
@@ -58,6 +65,7 @@ class AuthController extends Controller
     }
     public function bookSave(Request $request)
     {
+        $uuid = uniqid();
         $book = new Booking;
         
         $book-> name = $request->name;  
@@ -65,10 +73,11 @@ class AuthController extends Controller
         $book-> phone_number = $request->phone_number;  
         $book-> roomcategory = $request->roomcategory;  
         $book-> room = $request->room;  
-        // dd($request->price);
-        $book-> price = $request->price;  
+        $book-> price = $request->price * $request->roomcategory;  
         $book-> checkInDate = $request->checkInDate;  
         $book-> checkOutDate = $request->checkOutDate;  
+        $book-> status = 'pending';
+        $book-> uuid = $uuid; 
         $book-> save();
 
         session([
@@ -77,6 +86,9 @@ class AuthController extends Controller
             'phone' => $request->phone_number,
             'room' => $request->room,
             'price' => $request->price,
+            'amount' => $request->amount,
+            'uuid' => $uuid,
+            'roomcategory' => $request->roomcategory,
         ]);
 
         return redirect(route("stripe.form"));

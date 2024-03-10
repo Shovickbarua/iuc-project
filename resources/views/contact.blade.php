@@ -11,7 +11,7 @@
         <img src="{{asset('/')}}dist/asset/image/contactus3.jpg" media="min-width:600px" alt="Contact Image" class="contactimage">
 
 
-        <div class="text-caption">
+        <div class="contact-text-caption">
 
             <h1 class="text-contact">Contact Us</h1>
 

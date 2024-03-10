@@ -19,6 +19,8 @@ return new class extends Migration
             $table->string('roomcategory');
             $table->string('room');
             $table->string('price');
+            $table->string('status');
+            $table->string('uuid');
             $table->date('checkInDate');
             $table->date('checkOutDate');
             $table->timestamps();

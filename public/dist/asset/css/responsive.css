@@ -495,18 +495,19 @@ padding-left: 30px;
   padding-top: 50px; 
 }
 
-.text-caption {
-  top: 15%; 
+.contact-text-caption{
+  display: none;
 }
-
 .contact-title {
   font-size: 34px;
 }
 
 .title-writeus {
-  font-size: 30px; 
+  display: none;
 }
-
+.title-writeus:after{
+  display: none;
+}
 .form-control {
   margin-bottom: 15px; 
 }
@@ -520,9 +521,7 @@ padding-left: 30px;
   font-size: 13px;
 }
 
-.title-writeus:after {
-  left: 50%; 
-}
+
 .contact-icon{
   font-size: 25px;
 }
@@ -545,15 +544,9 @@ padding-left: 30px;
       font-size: 30px; 
   }
 
-  .title-writeus {
-      font-size: 24px; 
-      padding-bottom: 20px; 
-  }
+  
 
-  .title-writeus:after {
-      left: 38%;
-      padding-bottom: 30px;
-  }
+
 }
 
 
@@ -591,9 +584,7 @@ padding-left: 30px;
   }
 
   .title-writeus:after {
-    left: 45%;
-    width: 60px;
-    padding-bottom: 40px; 
+    display: none;
   }
 
   .form-control {
@@ -620,7 +611,7 @@ padding-left: 30px;
 @media screen and (min-width: 320px) and (max-width: 568px) {
   /* sliderimage */
   .carousel-caption {
-      font-size: 10px; 
+      display: none; 
   }
 
   .slider-title {
@@ -717,8 +708,8 @@ padding-left: 30px;
   /* location */
   .home-map-size {
       margin-top: 10px; 
-      /* width: 100%;
-      height: 100%; */
+      width: 100%;
+      height: 100%;
   }
 
   .homemap-title {

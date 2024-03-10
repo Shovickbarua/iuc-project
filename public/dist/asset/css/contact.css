@@ -39,19 +39,20 @@
         font-size: 54px;
         font-family: "Playfair Display", serif;
         font-weight: bold;
-        text-align: center;
-        align-items: center;
+       
         color: #000000;
 
 }
-.text-caption{
+.contact-text-caption{
     position: absolute;
     top:25%;
-    padding: 20px;
+    padding-left: 570px;
+    text-align: center;
+    
 }
 
 .maptop{
-    padding-bottom: 83px;
+    padding-bottom: 3px;
 }
 /* .map-container {
     height: 300px; 
@@ -59,6 +60,10 @@
 .contact-detail{
     padding-top: 60px;
     left: 10px;
+}
+.text-caption.text-contact{
+    
+    justify-content: center;
 }
 .contact-title{
     font-size: 50px;

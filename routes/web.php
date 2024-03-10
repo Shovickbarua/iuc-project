@@ -3,6 +3,8 @@
 use App\Http\Controllers\StripePaymentController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\RoomController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,6 +19,10 @@ use App\Http\Controllers\AuthController;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
+Route::get('/customer/{uuid}', [RoomController::class, 'show'])->name('rooms.show');
+Route::get('/customer/refund/{uuid}', [RoomController::class, 'refund'])->name('rooms.refund');
+
+Route::get('/admin/rooms-list', [RoomController::class, 'index'])->name('rooms.index');
 
 Route::get('/',[AuthController::class,'index'])->name('home');
 Route::get('/room',[AuthController::class,'room'])->name('room');

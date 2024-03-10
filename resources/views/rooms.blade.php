@@ -2,10 +2,10 @@
 @section('title', 'Room')
 @section('content')
 
-<div class="roompage">
+
     <!-- 1st room -->
     <section id="rooms-section1">
-    <div class="allroom-card">
+    <div class="allroom-card mt-5">
       <div class="room-details">
         <!-- Room Details Section -->
         
@@ -65,6 +65,15 @@
         
               <div class="col-lg-7 roomdetails">
                   <button class="roomdetails-btn" id="showDetails1">ROOM DETAILS</button>
+
+                   <!-- Display Availability Status -->
+                   @if ($froom->status == 1)
+                   <span class="availability-status mx-2 my-auto text-success">Available</span>
+                   @else
+                   <span class="availability-status mx-2 my-auto text-danger">Not Available</span>
+                   @endif
+
+
                 </div>
                 <div class="col-lg-5 roombook ">
                   <button  type="button" class=" roombook-btn" data-toggle="modal" data-target="#reservationModal">Book Now</button>
@@ -137,29 +146,123 @@
                     </div>
                     <div class="modal-footer">
                         <button type="" class=" btn-reservation-close" data-dismiss="modal">Close</button>
-                        <button type="submit" class=" btn-reservation-reserve" id="reserveButton">Reserve</button>
+                        <button class=" btn-reservation-reserve"  id="reserveButton" data-dismiss="modal" data-toggle="modal" data-target="#totalAmountModal">Reserve</button>
                     </div>
-        
-        
-        
-                  
-        
-        
                 </div>
-                  </form>
+                  
 
             
                 </div>
             
             </div>
   
-  
+            
+          <!-- Total Amount Modal -->
+          <div class="modal fade" id="totalAmountModal" tabindex="-1" role="dialog" aria-labelledby="totalAmountModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="totalAmountModalLabel">Reservation Summary</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="card">
+                        <div class="card-body">
+                          <h5 class="card-title  ">Total Amount<span class="card-text d-flex justify-content-end">$200</span></h5>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-12">
+                      <div class="card">
+                        <div class="card-body">
+                          <h5 class="card-title">Advance Payment (20%)<span class="card-text d-flex justify-content-end">$40</span></h5>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-12">
+                      <div class="card">
+                        <div class="card-body">
+                          <h5 class="card-title">Remaining Payment <span class="card-text d-flex justify-content-end">$160</span></h5>
+                    
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-12">
+                      <div class="card">
+                        <div class="card-body">
+                          <h5 class="card-title">Enter Amount</h5>
+                          <input type="text" placeholder="Enter your amount" name="amount" class="form-control" id="name">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class=" btn-reservation-close" data-dismiss="modal">Close</button>
+                  <button type="button" class=" btn-reservation-reserve"data-dismiss="modal" data-toggle="modal" data-target="#paymentMethodModal">Proceed to Payment</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+          <!-- Payment Method Modal -->
+          <div class="modal fade" id="paymentMethodModal" tabindex="-1" role="dialog" aria-labelledby="paymentMethodModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="paymentMethodModalLabel">Select Payment Method</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <button type="button" class="btn btn-secondary btn-block bkash-color" data-toggle="modal" data-target="#bkashPaymentModal">Pay with bKash</button>
+                <button type="submit" class="btn btn-secondary btn-block credit-debit-card-color">Pay with Credit/Debit Card</button>
+              </div>
+            </div>
+          </div>
+          </div>
+        </form>
+          <!-- Bkash Payment Method Modal -->
+          <div class="modal fade" id="bkashPaymentModal" tabindex="-1" role="dialog" aria-labelledby="bkashPaymentModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+          <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="bkashPaymentModalLabel">bKash Payment</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>Please enter your bKash mobile number to proceed with the payment:</p>
+            <div class="form-group">
+              <label for="bkashMobileNumber">Mobile Number</label>
+              <input type="tel" class="form-control" id="bkashMobileNumber" placeholder="Enter your bKash mobile number" required>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Confirm Payment</button>
+          </div>
+          </div>
+          </div>
+          </div>
+
+
+
             <!-- room-detailsbutton -->
                   <div id="roomdetailsshow1">
                     <div class="details-table container ">
                         
                       <div class="row ratecard-info ">
-                        <div class="col-sm-5">
+                        <div class="col-sm-8">
                         <div class="rate-cards-detials">
                             <div class="rate-card-room-details-wrap">
                                 <div class="roomdetails-heading ">ROOM DETAILS</div>
@@ -182,8 +285,8 @@
                             </div>
                   </div>
               
-                          <div class=" room-card-border">
-                          <div class="col-sm-7 ">
+                          
+                          <div class="col-sm-4 ">
                           <div class="rate-card-service-details-wrap">
                               <div class="clearfix service-details-subsection-container mx-3">
                                   
@@ -192,12 +295,9 @@
                                           <div class="roomdetails-heading">OTHER CONVENIENCES</div>
                                         
                                               
-                                                      <div>24-hour in-room dining
-                                          
-                                              
-                                                      Premium Wi-Fi at nominal charge </div>
-                                          
-                                              
+                                                      <div>24-hour in-room dining </div>
+                                                                                                                                          
+                                      
                                                       <div>Inclusive newspapers</div>
                                           
                                               
@@ -220,7 +320,7 @@
               </div>
             </div>
           </div>
-    </div>
+    
     </section>
   
     <!-- 2nd room -->
@@ -288,6 +388,12 @@
   
           <div class="col-lg-7 roomdetails">
               <button class="roomdetails-btn" id="showDetails2">ROOM DETAILS</button>
+               <!-- Display Availability Status -->
+               @if ($droom->status == 1)
+               <span class="availability-status mx-2 my-auto text-success">Available</span>
+               @else
+               <span class="availability-status mx-2 my-auto text-danger">Not Available</span>
+               @endif
             </div>
             <div class="col-lg-5 roombook ">
               <button  type="button" class=" roombook-btn" data-toggle="modal" data-target="#reservationModal2">Book Now</button>
@@ -358,27 +464,108 @@
         
         
                       
+                    </div>                  
+  
+                      <div class="modal-footer">
+                        <button type="" class=" btn-reservation-close" data-dismiss="modal">Close</button>
+                        <button type="submit" class=" btn-reservation-reserve"  id="reserveButton"data-dismiss="modal" data-toggle="modal" data-target="#totalAmountModal">Reserve</button>
                     </div>
-                    <div class="modal-footer">
-                      <button type="" class=" btn-reservation-close" data-dismiss="modal">Close</button>
-                      <button type="submit" class=" btn-reservation-reserve" id="reserveButton">Reserve</button>
-                  </div>
-        
-        
-        
-               
-                  
-        
-        
+
                 </div>
-        
-            </div>
-          </form>
-        
-        </div>
-  
-  
-  
+                  </form>
+
+                </div>
+
+              </div>
+
+
+              <!-- Total Amount Modal -->
+              <div class="modal fade" id="totalAmountModal" tabindex="-1" role="dialog" aria-labelledby="totalAmountModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="totalAmountModalLabel">Reservation Summary</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="card">
+                        <div class="card-body">
+                          <h5 class="card-title  ">Total Amount<span class="card-text d-flex justify-content-end">$200</span></h5>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-12">
+                      <div class="card">
+                        <div class="card-body">
+                          <h5 class="card-title">Advance Payment (20%)<span class="card-text d-flex justify-content-end">$40</span></h5>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-12">
+                      <div class="card">
+                        <div class="card-body">
+                          <h5 class="card-title">Remaining Payment <span class="card-text d-flex justify-content-end">$160</span></h5>
+                    
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn-reservation-close" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn-reservation-reserve"data-dismiss="modal" data-toggle="modal" data-target="#paymentMethodModal">Proceed to Payment</button>
+                </div>
+              </div>
+              </div>
+              </div>
+              
+            
+              <!-- Payment Method Modal -->
+              <div class="modal fade" id="paymentMethodModal" tabindex="-1" role="dialog" aria-labelledby="paymentMethodModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+              <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="paymentMethodModalLabel">Select Payment Method</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <button type="button" class="btn btn-secondary btn-block bkash-color" data-toggle="modal" data-target="#bkashPaymentModal">Pay with bKash</button>
+                <button type="button" class="btn btn-secondary btn-block credit-debit-card-color">Pay with Credit/Debit Card</button>
+              </div>
+              </div>
+              </div>
+              </div>
+            </form>
+              <!-- Bkash Payment Method Modal -->
+              <div class="modal fade" id="bkashPaymentModal" tabindex="-1" role="dialog" aria-labelledby="bkashPaymentModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+              <div class="modal-content">
+              <div class="modal-header">
+              <h5 class="modal-title" id="bkashPaymentModalLabel">bKash Payment</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+              </button>
+              </div>
+              <div class="modal-body">
+              <p>Please enter your bKash mobile number to proceed with the payment:</p>
+              <div class="form-group">
+              <label for="bkashMobileNumber">Mobile Number</label>
+              <input type="tel" class="form-control" id="bkashMobileNumber" placeholder="Enter your bKash mobile number" required>
+              </div>
+              </div>
+              <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Confirm Payment</button>
+              </div>
+              </div>
+              </div>
+              </div>
   
   
         <!-- room-detailsbutton -->
@@ -386,7 +573,7 @@
                 <div class="details-table container ">
                     
                   <div class="row ratecard-info ">
-                    <div class="col-md-5">
+                    <div class="col-sm-8">
                     <div class="rate-cards-detials">
                         <div class="rate-card-room-details-wrap">
                             <div class="roomdetails-heading ">ROOM DETAILS</div>
@@ -409,8 +596,7 @@
                         </div>
               </div>
           
-                      <div class=" room-card-border">
-                      <div class="col-md-7">
+                      <div class="col-sm-4">
                       <div class="rate-card-service-details-wrap">
                           <div class="clearfix service-details-subsection-container mx-3">
                               
@@ -419,12 +605,9 @@
                                       <div class="roomdetails-heading">OTHER CONVENIENCES</div>
                                     
                                           
-                                                  <div>24-hour in-room dining
-                                      
-                                          
-                                                  Premium Wi-Fi at nominal charge </div>
-                                      
-                                          
+                                                  <div>24-hour in-room dining  </div>                                                                           
+                                                 
+                                                                               
                                                   <div>Inclusive newspapers</div>
                                       
                                           
@@ -516,15 +699,21 @@
             
                   <div class="col-lg-7 roomdetails">
                       <button class="roomdetails-btn" id="showDetails3">ROOM DETAILS</button>
+                       <!-- Display Availability Status -->
+                        @if ($croom->status == 1)
+                        <span class="availability-status mx-2 my-auto text-success">Available</span>
+                        @else
+                        <span class="availability-status mx-2 my-auto text-danger">Not Available</span>
+                        @endif
                     </div>
                     <div class="col-lg-5 roombook ">
-                      <button  type="button" class=" roombook-btn" data-toggle="modal" data-target="#reservationModal2">Book Now</button>
+                      <button  type="button" class=" roombook-btn" data-toggle="modal" data-target="#reservationModal3">Book Now</button>
                     </div>
                   </div>
                 </div>
             
                 <!-- reservation -->
-                <div class="modal fade" id="reservationModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal fade" id="reservationModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 
                   
                   <div class="modal-dialog" role="document">
@@ -589,27 +778,115 @@
                             </div>
                             <div class="modal-footer">
                               <button type="" class=" btn-reservation-close" data-dismiss="modal">Close</button>
-                              <button type="submit" class=" btn-reservation-reserve" id="reserveButton">Reserve</button>
+                              <button type="submit" class=" btn-reservation-reserve"  id="reserveButton"data-dismiss="modal" data-toggle="modal" data-target="#totalAmountModal">Reserve</button>
                           </div>
-                
-                
-                
+      
+                      </div>
+                        
+      
+      
+                      </div>
+      
+                    </div>
+      
+      
+                    <!-- Total Amount Modal -->
+                    <div class="modal fade" id="totalAmountModal" tabindex="-1" role="dialog" aria-labelledby="totalAmountModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="totalAmountModalLabel">Reservation Summary</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <div class="row">
+                          <div class="col-md-12">
+                            <div class="card">
+                              <div class="card-body">
+                                <h5 class="card-title  ">Total Amount<span class="card-text d-flex justify-content-end">$200</span></h5>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-12">
+                            <div class="card">
+                              <div class="card-body">
+                                <h5 class="card-title">Advance Payment (20%)<span class="card-text d-flex justify-content-end">$40</span></h5>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-12">
+                            <div class="card">
+                              <div class="card-body">
+                                <h5 class="card-title">Remaining Payment <span class="card-text d-flex justify-content-end">$160</span></h5>
                           
-                          
-                
-                
+                              </div>
+                            </div>
+                          </div>
                         </div>
-                      </form>
-                  </div>
-                
-                </div>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn-reservation-close" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn-reservation-reserve"data-dismiss="modal" data-toggle="modal" data-target="#paymentMethodModal">Proceed to Payment</button>
+                      </div>
+                    </div>
+                    </div>
+                    </div>
+      
+      
+      
+      
+                    <!-- Payment Method Modal -->
+                    <div class="modal fade" id="paymentMethodModal" tabindex="-1" role="dialog" aria-labelledby="paymentMethodModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="paymentMethodModalLabel">Select Payment Method</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <button type="button" class="btn btn-secondary btn-block bkash-color" data-toggle="modal" data-target="#bkashPaymentModal">Pay with bKash</button>
+                      <button type="button" class="btn btn-secondary btn-block credit-debit-card-color">Pay with Credit/Debit Card</button>
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+                  </form>
+                    <!-- Bkash Payment Method Modal -->
+                    <div class="modal fade" id="bkashPaymentModal" tabindex="-1" role="dialog" aria-labelledby="bkashPaymentModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title" id="bkashPaymentModalLabel ">bKash Payment</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                    </div>
+                    <div class="modal-body">
+                    <p>Please enter your bKash mobile number to proceed with the payment:</p>
+                    <div class="form-group">
+                    <label for="bkashMobileNumber">Mobile Number</label>
+                    <input type="tel" class="form-control" id="bkashMobileNumber" placeholder="Enter your bKash mobile number" required>
+                    </div>
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Confirm Payment</button>
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+        
   
       <!-- room-detailsbutton -->
                       <div id="roomdetailsshow3">
                         <div class="details-table container ">
                             
                           <div class="row ratecard-info ">
-                            <div class="col-md-5">
+                            <div class="col-sm-8">
                             <div class="rate-cards-detials">
                                 <div class="rate-card-room-details-wrap">
                                     <div class="roomdetails-heading ">ROOM DETAILS</div>
@@ -632,8 +909,8 @@
                                 </div>
                       </div>
                   
-                              <div class=" room-card-border">
-                              <div class="col-md-7">
+                              
+                              <div class="col-sm-4">
                               <div class="rate-card-service-details-wrap">
                                   <div class="clearfix service-details-subsection-container mx-3">
                                       
@@ -642,12 +919,8 @@
                                               <div class="roomdetails-heading">OTHER CONVENIENCES</div>
                                             
                                                   
-                                                          <div>24-hour in-room dining
-                                              
-                                                  
-                                                          Premium Wi-Fi at nominal charge </div>
-                                              
-                                                  
+                                                          <div>24-hour in-room dining  </div>                                                                                            
+                                                                                                                                                      
                                                           <div>Inclusive newspapers</div>
                                               
                                                   
@@ -738,6 +1011,12 @@
                 </div>
             <div class="col-lg-7 roomdetails">
                 <button class="roomdetails-btn" id="showDetails4">ROOM DETAILS</button>
+                 <!-- Display Availability Status -->
+                 @if ($proom->status == 1)
+                 <span class="availability-status mx-2 my-auto text-success">Available</span>
+                 @else
+                 <span class="availability-status mx-2 my-auto text-danger">Not Available</span>
+                 @endif
               </div>
               <div class="col-lg-5 roombook ">
                 <button  type="button" class=" roombook-btn" data-toggle="modal" data-target="#reservationModal5">Book Now</button>
@@ -812,13 +1091,108 @@
                       </div>
                       <div class="modal-footer">
                         <button type="" class=" btn-reservation-close" data-dismiss="modal">Close</button>
-                        <button type="submit" class=" btn-reservation-reserve" id="reserveButton">Reserve</button>
-                    </div>         
-                  </div>
-              </form>
+                        <button type="submit" class=" btn-reservation-reserve"  id="reserveButton"data-dismiss="modal" data-toggle="modal" data-target="#totalAmountModal">Reserve</button>
+                    </div>
+
+                </div>
+                 
+
+
+                </div>
+
               </div>
-          
-          </div>
+
+
+              <!-- Total Amount Modal -->
+              <div class="modal fade" id="totalAmountModal" tabindex="-1" role="dialog" aria-labelledby="totalAmountModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="totalAmountModalLabel">Reservation Summary</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="card">
+                        <div class="card-body">
+                          <h5 class="card-title  ">Total Amount<span class="card-text d-flex justify-content-end">$200</span></h5>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-12">
+                      <div class="card">
+                        <div class="card-body">
+                          <h5 class="card-title">Advance Payment (20%)<span class="card-text d-flex justify-content-end">$40</span></h5>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-12">
+                      <div class="card">
+                        <div class="card-body">
+                          <h5 class="card-title">Remaining Payment <span class="card-text d-flex justify-content-end">$160</span></h5>
+                    
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn-reservation-close" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn-reservation-reserve"data-dismiss="modal" data-toggle="modal" data-target="#paymentMethodModal">Proceed to Payment</button>
+                </div>
+              </div>
+              </div>
+              </div>
+
+
+
+
+              <!-- Payment Method Modal -->
+              <div class="modal fade" id="paymentMethodModal" tabindex="-1" role="dialog" aria-labelledby="paymentMethodModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+              <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="paymentMethodModalLabel">Select Payment Method</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <button type="button" class="btn btn-secondary btn-block bkash-color" data-toggle="modal" data-target="#bkashPaymentModal">Pay with bKash</button>
+                <button type="button" class="btn btn-secondary btn-block credit-debit-card-color">Pay with Credit/Debit Card</button>
+              </div>
+              </div>
+              </div>
+              </div>
+            </form>
+              <!-- Bkash Payment Method Modal -->
+              <div class="modal fade" id="bkashPaymentModal" tabindex="-1" role="dialog" aria-labelledby="bkashPaymentModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+              <div class="modal-content">
+              <div class="modal-header">
+              <h5 class="modal-title" id="bkashPaymentModalLabel">bKash Payment</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+              </button>
+              </div>
+              <div class="modal-body">
+              <p>Please enter your bKash mobile number to proceed with the payment:</p>
+              <div class="form-group">
+              <label for="bkashMobileNumber">Mobile Number</label>
+              <input type="tel" class="form-control" id="bkashMobileNumber" placeholder="Enter your bKash mobile number" required>
+              </div>
+              </div>
+              <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Confirm Payment</button>
+              </div>
+              </div>
+              </div>
+              </div>
+  
   
   
   
@@ -828,7 +1202,7 @@
                   <div class="details-table container ">
                       
                     <div class="row ratecard-info ">
-                      <div class="col-md-5">
+                      <div class="col-sm-8">
                       <div class="rate-cards-detials">
                             <div class="rate-card-room-details-wrap">
                                 <div class="roomdetails-heading ">ROOM DETAILS</div>
@@ -851,8 +1225,8 @@
                             </div>
                 </div>
               
-                        <div class=" room-card-border">
-                          <div class="col-md-7">
+                    
+                          <div class="col-sm-4">
                           <div class="rate-card-service-details-wrap">
                               <div class="clearfix service-details-subsection-container mx-3">
                                   
@@ -861,11 +1235,10 @@
                                           <div class="roomdetails-heading">OTHER CONVENIENCES</div>
                                         
                                               
-                                                    <div>24-hour in-room dining
+                                                    <div>24-hour in-room dining </div>
                                           
                                               
-                                                    Premium Wi-Fi at nominal charge </div>
-                                          
+                                                                                         
                                               
                                                     <div>Inclusive newspapers</div>
                                           
@@ -959,6 +1332,12 @@
   
           <div class="col-lg-7 roomdetails">
               <button class="roomdetails-btn" id="showDetails5">ROOM DETAILS</button>
+               <!-- Display Availability Status -->
+               @if ($rroom->status == 1)
+               <span class="availability-status mx-2 my-auto text-success">Available</span>
+               @else
+               <span class="availability-status mx-2 my-auto text-danger">Not Available</span>
+               @endif
             </div>
             <div class="col-lg-5 roombook ">
               <button  type="button" class=" roombook-btn" data-toggle="modal" data-target="#reservationModal6">Book Now</button>
@@ -967,7 +1346,7 @@
         </div>
   
         <!-- reservation -->
-        <div class="modal fade" id="reservationModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel6" aria-hidden="true">
+        <div class="modal fade" id="reservationModal6" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel6" aria-hidden="true">
         
   
           <div class="modal-dialog" role="document">
@@ -1033,14 +1412,108 @@
                     </div>
                     <div class="modal-footer">
                       <button type="" class=" btn-reservation-close" data-dismiss="modal">Close</button>
-                      <button type="submit" class=" btn-reservation-reserve" id="reserveButton">Reserve</button>
+                      <button type="submit" class=" btn-reservation-reserve"  id="reserveButton"data-dismiss="modal" data-toggle="modal" data-target="#totalAmountModal">Reserve</button>
+                  </div>
+
+              </div>
+                
+
+
+              </div>
+
+            </div>
+
+
+            <!-- Total Amount Modal -->
+            <div class="modal fade" id="totalAmountModal" tabindex="-1" role="dialog" aria-labelledby="totalAmountModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="totalAmountModalLabel">Reservation Summary</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="card">
+                      <div class="card-body">
+                        <h5 class="card-title  ">Total Amount<span class="card-text d-flex justify-content-end">$200</span></h5>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="card">
+                      <div class="card-body">
+                        <h5 class="card-title">Advance Payment (20%)<span class="card-text d-flex justify-content-end">$40</span></h5>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="card">
+                      <div class="card-body">
+                        <h5 class="card-title">Remaining Payment <span class="card-text d-flex justify-content-end">$160</span></h5>
+                  
+                      </div>
+                    </div>
                   </div>
                 </div>
-            </form>
-        
-          </div>
-        
-        </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn-reservation-close" data-dismiss="modal">Close</button>
+                <button type="button" class="btn-reservation-reserve"data-dismiss="modal" data-toggle="modal" data-target="#paymentMethodModal">Proceed to Payment</button>
+              </div>
+            </div>
+            </div>
+            </div>
+
+
+
+
+            <!-- Payment Method Modal -->
+            <div class="modal fade" id="paymentMethodModal" tabindex="-1" role="dialog" aria-labelledby="paymentMethodModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="paymentMethodModalLabel">Select Payment Method</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <button type="button" class="btn btn-secondary btn-block bkash-color" data-toggle="modal" data-target="#bkashPaymentModal">Pay with bKash</button>
+              <button type="button" class="btn btn-secondary btn-block credit-debit-card-color">Pay with Credit/Debit Card</button>
+            </div>
+            </div>
+            </div>
+            </div>
+          </form>
+            <!-- Bkash Payment Method Modal -->
+            <div class="modal fade" id="bkashPaymentModal" tabindex="-1" role="dialog" aria-labelledby="bkashPaymentModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="bkashPaymentModalLabel">bKash Payment</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+            <p>Please enter your bKash mobile number to proceed with the payment:</p>
+            <div class="form-group">
+            <label for="bkashMobileNumber">Mobile Number</label>
+            <input type="tel" class="form-control" id="bkashMobileNumber" placeholder="Enter your bKash mobile number" required>
+            </div>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Confirm Payment</button>
+            </div>
+            </div>
+            </div>
+            </div>
+
   
   
   
@@ -1051,7 +1524,7 @@
                 <div class="details-table container ">
                     
                   <div class="row ratecard-info ">
-                    <div class="col-md-5">
+                    <div class="col-sm-8">
                     <div class="rate-cards-detials">
                         <div class="rate-card-room-details-wrap">
                             <div class="roomdetails-heading ">ROOM DETAILS</div>
@@ -1075,7 +1548,7 @@
               </div>
           
                       <div class=" room-card-border">
-                      <div class="col-md-7">
+                      <div class="col-sm-4">
                       <div class="rate-card-service-details-wrap">
                           <div class="clearfix service-details-subsection-container mx-3">
                               
@@ -1084,10 +1557,10 @@
                                       <div class="roomdetails-heading">OTHER CONVENIENCES</div>
                                     
                                           
-                                                  <div>24-hour in-room dining
+                                                  <div>24-hour in-room dining</div>
                                       
                                           
-                                                  Premium Wi-Fi at nominal charge </div>
+                                                 
                                       
                                           
                                                   <div>Inclusive newspapers</div>
@@ -1117,7 +1590,7 @@
   
   <!-- 6th room -->
   <section id="rooms-section6">
-  <div class="allroom-card">
+  <div class="allroom-card mb-5">
     <div class="room-details">
   <!-- Room Details Section -->
   
@@ -1182,6 +1655,12 @@
   
         <div class="col-lg-7 roomdetails">
             <button class="roomdetails-btn" id="showDetails6">ROOM DETAILS</button>
+             <!-- Display Availability Status -->
+             @if ($eroom->status == 1)
+             <span class="availability-status mx-2 my-auto text-success">Available</span>
+             @else
+             <span class="availability-status mx-2 my-auto text-danger">Not Available</span>
+             @endif
           </div>
           <div class="col-lg-5 roombook ">
             <button  type="button" class=" roombook-btn" data-toggle="modal" data-target="#reservationModal8">Book Now</button>
@@ -1190,7 +1669,7 @@
       </div>
   
       <!-- reservation -->
-      <div class="modal fade" id="reservationModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel8" aria-hidden="true">
+      <div class="modal fade" id="reservationModal8" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel8" aria-hidden="true">
       
   
         <div class="modal-dialog" role="document">
@@ -1256,13 +1735,108 @@
                   </div>
                   <div class="modal-footer">
                     <button type="" class=" btn-reservation-close" data-dismiss="modal">Close</button>
-                    <button type="submit" class=" btn-reservation-reserve" id="reserveButton">Reserve</button>
+                    <button type="submit" class=" btn-reservation-reserve "  id="reserveButton"data-dismiss="modal" data-toggle="modal" data-target="#totalAmountModal">Reserve</button>
+                </div>
+
+            </div>
+              
+
+
+            </div>
+
+          </div>
+
+
+          <!-- Total Amount Modal -->
+          <div class="modal fade" id="totalAmountModal" tabindex="-1" role="dialog" aria-labelledby="totalAmountModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="totalAmountModalLabel">Reservation Summary</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title  ">Total Amount<span class="card-text d-flex justify-content-end">$200</span></h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title">Advance Payment (20%)<span class="card-text d-flex justify-content-end">$40</span></h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title">Remaining Payment <span class="card-text d-flex justify-content-end">$160</span></h5>
+                
+                    </div>
+                  </div>
                 </div>
               </div>
-            </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn-reservation-close" data-dismiss="modal">Close</button>
+              <button type="button" class="btn-reservation-reserve"data-dismiss="modal" data-toggle="modal" data-target="#paymentMethodModal">Proceed to Payment</button>
+            </div>
           </div>
-      
-      </div>
+          </div>
+          </div>
+
+
+
+
+          <!-- Payment Method Modal -->
+          <div class="modal fade" id="paymentMethodModal" tabindex="-1" role="dialog" aria-labelledby="paymentMethodModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+          <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="paymentMethodModalLabel">Select Payment Method</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <button type="button" class="btn btn-secondary btn-block bkash-color" data-toggle="modal" data-target="#bkashPaymentModal">Pay with bKash</button>
+            <button type="button" class="btn btn-secondary btn-block credit-debit-card-color">Pay with Credit/Debit Card</button>
+          </div>
+          </div>
+          </div>
+          </div>
+        </form>
+          <!-- Bkash Payment Method Modal -->
+          <div class="modal fade" id="bkashPaymentModal" tabindex="-1" role="dialog" aria-labelledby="bkashPaymentModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+          <div class="modal-content">
+          <div class="modal-header">
+          <h5 class="modal-title" id="bkashPaymentModalLabel">bKash Payment</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+          </button>
+          </div>
+          <div class="modal-body">
+          <p>Please enter your bKash mobile number to proceed with the payment:</p>
+          <div class="form-group">
+          <label for="bkashMobileNumber">Mobile Number</label>
+          <input type="tel" class="form-control" id="bkashMobileNumber" placeholder="Enter your bKash mobile number" required>
+          </div>
+          </div>
+          <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Confirm Payment</button>
+          </div>
+          </div>
+          </div>
+          </div>
+
   
   
   
@@ -1273,7 +1847,7 @@
               <div class="details-table container ">
                   
                 <div class="row ratecard-info ">
-                  <div class="col-md-5">
+                  <div class="col-sm-8">
                   <div class="rate-cards-detials">
                        <div class="rate-card-room-details-wrap">
                            <div class="roomdetails-heading ">ROOM DETAILS</div>
@@ -1296,8 +1870,8 @@
                        </div>
             </div>
          
-                    <div class=" room-card-border">
-                     <div class="col-md-7">
+                    
+                     <div class="col-sm-4">
                      <div class="rate-card-service-details-wrap">
                          <div class="clearfix service-details-subsection-container mx-3">
                              

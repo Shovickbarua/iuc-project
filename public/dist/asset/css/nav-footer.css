@@ -187,9 +187,10 @@
               
               .navbar-light .navbar-brand {
                 color: rgb(2, 0, 15);
-                font-size: 16px;
+                font-size: 10px;
                 padding-left: 10px;
                 font-family: "poppins";
+                display: none;
               }
               
               .navbar-light.sticky-header.navbar-light .navbar-brand {

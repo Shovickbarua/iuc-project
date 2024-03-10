@@ -47,7 +47,7 @@ class StripePaymentController extends Controller
             "source" => $request->stripeToken
          ));
     Stripe\Charge::create ([
-            "amount" => session('price')* 100,
+            "amount" => (session('roomcategory') * session('amount'))* 100,
             "currency" => "usd",
             "customer" => $customer->id,
             "description" => "Test payment from itsolutionstuff.com.",

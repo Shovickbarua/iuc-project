@@ -13,14 +13,14 @@
       <div class="carousel-inner">
         <div class="carousel-item active">
           <img src="{{asset('/')}}dist/asset/image/front-view.jpg" alt="front-view" class="slider-img">
-          <div class="carousel-caption d-none d-md-block">
+          <div class="carousel-caption ">
             <h1 class="slider-title">Welcome to Our Hotel</h1>
             <h2>Experience luxury and comfort</h2>
           </div>
          </div>
         <div class="carousel-item">
           <img src="{{asset('/')}}dist/asset/image/lobby2.jpg" alt="lobby" class="slider-img">
-          <div class="carousel-caption d-none d-md-block">
+          <div class="carousel-caption">
             <h1 class="slider-title">Welcome to Our Hotel</h1>
           <h2>Experience luxury and comfort</h2>
         </div>
@@ -49,11 +49,11 @@
       </div>
       <a class="carousel-control-prev " href="#roomCarousel"  role="button" data-slide="prev">
         <span class="carousel-control-prev-icon slider-arrow" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
+        <span class="visually-hidden d-none">Previous</span>
       </a>
       <a class="carousel-control-next" href="#roomCarousel"  role="button" data-slide="next">
         <span class="carousel-control-next-icon slider-arrow" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
+        <span class="visually-hidden d-none">Next</span>
       </a>
     </div>
     <!-- slider end -->
@@ -69,7 +69,7 @@
 <div class="row">
   <div class="col-md-4 mb-5 ">
     <div class="hotel-room">
-      <img src="{{asset('/')}}dist/asset/image/single room.jpg" class="homeourimage-card" alt="Single Room">
+      <img src="{{asset('/')}}dist/asset/image/room-image2.jpg" class="homeourimage-card" alt="Single Room">
       <div class="hotel-room-body">
         <a class="roomcard-title" href="{{ url('/room#rooms-section1') }}" style="text-decoration: none;">Single Room</a>
         <p class="roomcard-text1">Cozy and comfortable single room.</p>
@@ -80,10 +80,10 @@
   </div>
     <div class="col-md-4 mb-5 ">
       <div class="hotel-room">
-        <img src="{{asset('/')}}dist/asset/image/deluxe room.jpg" class="homeourimage-card" alt="Single Room">
+        <img src="{{asset('/')}}dist/asset/image/room-image4.jpg" class="homeourimage-card" alt="Single Room">
         <div class="hotel-room-body">
           <a class="roomcard-title" href="{{ url('/room#rooms-section2') }}" style="text-decoration: none;">Deluxe Room</a>
-          <p class="roomcard-text1">Cozy and comfortable single room.</p>
+          <p class="roomcard-text1">Cozy and comfortable.</p>
           <p class="roomcard-text2">$200</p>
           <p class="roomcard-text3 my-2">Per Night</p>
         </div>
@@ -91,10 +91,10 @@
     </div>
       <div class="col-md-4 mb-5 ">
         <div class="hotel-room">
-          <img src="{{asset('/')}}dist/asset/image/couple-room.jpg" class="homeourimage-card" alt="Single Room">
+          <img src="{{asset('/')}}dist/asset/image/deluxe room.jpg" class="homeourimage-card" alt="Single Room">
           <div class="hotel-room-body">
             <a class="roomcard-title"  href="{{ url('/room#rooms-section3') }}" style="text-decoration: none;">Couple Room</a>
-            <p class="roomcard-text1">Cozy and comfortable single room.</p>
+            <p class="roomcard-text1">Cozy and comfortable.</p>
             <p class="roomcard-text2">$300</p>
             <p class="roomcard-text3 my-2">Per Night</p>
           </div>
@@ -105,7 +105,7 @@
             <img src="{{asset('/')}}dist/asset/image/family room.jpg" class="homeourimage-card" alt="Single Room">
             <div class="hotel-room-body">
               <a class="roomcard-title" href="{{ url('/room#rooms-section4') }}" style="text-decoration: none;">Presidental Suite</a>
-              <p class="roomcard-text1">Cozy and comfortable single room.</p>
+              <p class="roomcard-text1">Cozy and comfortable.</p>
               <p class="roomcard-text2">$500</p>
               <p class="roomcard-text3 my-2">Per Night</p>
             </div>

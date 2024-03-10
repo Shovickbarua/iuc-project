@@ -10,14 +10,19 @@
 :root{
     --bg-color:#E1EBEE;
 }
-
+.home-page{
+    overflow-x:hidden;
+}
 /* sliderimage */
 .carousel-caption{
-        padding-bottom:210px;
+    
+        padding-bottom:20px;
+        margin-bottom: 120px;
         color:#ffffff;
         font-size: 30px;
         font-weight: bold;
         font-family:"Playfair Display", serif;
+        background-color: #c5874e;
  }
 
 .slider-title{
@@ -219,8 +224,6 @@
     
     .home-map-size{
         margin-top: 20px;
-       
-       
         
     } 
     
