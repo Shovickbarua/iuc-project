@@ -19,13 +19,17 @@ use App\Http\Controllers\RoomController;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
-Route::get('/customer/{uuid}', [RoomController::class, 'show'])->name('rooms.show');
+Route::get('/customer', [RoomController::class, 'show'])->name('rooms.show');
 Route::get('/customer/refund/{uuid}', [RoomController::class, 'refund'])->name('rooms.refund');
 
 Route::get('/admin/rooms-list', [RoomController::class, 'index'])->name('rooms.index');
 
 Route::get('/',[AuthController::class,'index'])->name('home');
 Route::get('/room',[AuthController::class,'room'])->name('room');
+Route::get('/register',[AuthController::class,'register'])->name('register');
+Route::post('/registers',[AuthController::class,'registers'])->name('registers');
+Route::get('/login',[AuthController::class,'login'])->name('login');
+Route::post('/logins',[AuthController::class,'logins'])->name('logins');
 Route::get('/gallery',[AuthController::class,'gallery'])->name('gallery');
 Route::get('/contact',[AuthController::class,'contact'])->name('contact');
 Route::get('/service',[AuthController::class,'service'])->name('service');

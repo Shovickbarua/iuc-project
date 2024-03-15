@@ -6,6 +6,8 @@ use App\Models\Auth;
 use App\Models\Booking;
 use App\Models\Contact;
 use App\Models\Room;
+use App\Models\User;
+use Illuminate\Contracts\Session\Session;
 use Illuminate\Http\Request;
 
 class AuthController extends Controller
@@ -13,6 +15,44 @@ class AuthController extends Controller
     /**
      * Display a listing of the resource.
      */
+    public function registers(Request $request)
+    {
+        $data = new User();
+        $data->name = $request->name;
+        $data->email = $request->email;
+        $data->username = $request->username;
+        $data->pass = $request->password;
+        $data->save();
+        // dd($data);
+        // User::create($data); 
+        return redirect(route("login"));
+    } 
+    public function register(Request $request)
+    {
+        return view("register");
+    } 
+    public function logins(Request $request)
+    {
+        $user = User::where("username", $request->username)->where("pass", $request->password)->first();
+        
+        if ($user) { // Check if user exists
+            session([
+                'name' => $user->name,
+                'email' => $user->email,
+                'username' => $user->username,
+            ]);
+    
+            if ($user->uuid) { // Check if uuid is not null
+                session(['uuid' => $user->uuid]);
+            }
+        }
+        return redirect(route("home"));
+    }
+    
+    public function login()
+    {
+        return view("login");
+    }
     public function index()
     {
         return view("home");
@@ -79,6 +119,10 @@ class AuthController extends Controller
         $book-> status = 'pending';
         $book-> uuid = $uuid; 
         $book-> save();
+
+        $users = User::where('username', session('username'))->first();
+        $users->uuid = $uuid;
+        $users->save();
 
         session([
             'name' => $request->name,

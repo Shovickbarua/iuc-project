@@ -9,7 +9,7 @@
 <div class="container">
 
     <h1 class="text-center">Stripe Payment Gateway </h1>
-    <p class="text-center"> Save this code if you want to retrieve your data : {{session('uuid')}}</p>
+    {{-- <p class="text-center"> Save this code if you want to retrieve your data : {{session('uuid')}}</p> --}}
     <div class="row">
         <div class="col-md-6 col-md-offset-3">
             <div class="panel panel-default credit-card-box">

@@ -24,6 +24,16 @@
           <li class="nav-item">
             <a class="nav-link" href="/contact">Contact</a>
           </li>
+          @if (Session::has('username'))
+          
+          @else
+          <li class="nav-item">
+            <a class="nav-link" href="/register">Register</a>
+          </li>
+          @endif
+          @if (Session::has('uuid'))
+            <a class="nav-link" href="/customer">Booking History</a>
+          @endif
         </ul>
       </div>
     </div>

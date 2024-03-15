@@ -8,11 +8,11 @@ use Illuminate\Http\Request;
 
 class RoomController extends Controller
 {
-    public function show($uuid)
+    public function show()
     {
-        $booking = Booking::where('uuid', $uuid)->first(); 
+        $booking = Booking::where('uuid', session('uuid'))->first(); 
 
-        return view('bookings_list_single',compact('booking')); 
+        return view('refund',compact('booking')); 
     }
     public function refund($uuid)
         {
