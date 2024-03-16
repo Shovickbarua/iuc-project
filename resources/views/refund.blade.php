@@ -48,7 +48,18 @@
             <p><strong>Check-out Date:</strong> {{ $booking->checkOutDate }}</p>
             <p><strong>Advance Paid:</strong> ${{ $booking->price }}</p>
             <p>Are you sure you want to cancel this booking?</p>
-            <a href="{{ route('rooms.refund', $booking->uuid) }}" type="submit">Cancel</a>
+            @php
+                $createdAt = \Carbon\Carbon::parse($booking->created_at);
+                $currentDate = \Carbon\Carbon::now();
+                $differenceInDays = $currentDate->diffInDays($createdAt);
+            @endphp
+        
+            {{-- Show cancel button only if created more than 1 day ago --}}
+            @if ($differenceInDays > 1)
+                {{-- <a href="{{ route('rooms.refund', $booking->uuid) }}" type="submit">Cancel</a> --}}
+            @else
+                <a href="{{ route('rooms.refund', $booking->uuid) }}" type="submit">Cancel</a>
+            @endif
     </div>
 </div>
 

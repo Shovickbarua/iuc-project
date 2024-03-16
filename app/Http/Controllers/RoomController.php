@@ -3,6 +3,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Booking;
 use App\Models\Room;
+use Carbon\Carbon;
 use Session;
 use Illuminate\Http\Request;
 
