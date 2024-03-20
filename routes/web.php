@@ -29,6 +29,7 @@ Route::get('/room',[AuthController::class,'room'])->name('room');
 Route::get('/register',[AuthController::class,'register'])->name('register');
 Route::post('/registers',[AuthController::class,'registers'])->name('registers');
 Route::get('/login',[AuthController::class,'login'])->name('login');
+Route::get('/logout',[AuthController::class,'logout'])->name('logout');
 Route::post('/logins',[AuthController::class,'logins'])->name('logins');
 Route::get('/gallery',[AuthController::class,'gallery'])->name('gallery');
 Route::get('/contact',[AuthController::class,'contact'])->name('contact');

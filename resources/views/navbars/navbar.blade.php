@@ -25,7 +25,9 @@
             <a class="nav-link" href="/contact">Contact</a>
           </li>
           @if (Session::has('username'))
-          
+          <li class="nav-item">
+            <a class="nav-link" href="/logout">Logout</a>
+          </li>
           @else
           <li class="nav-item">
             <a class="nav-link" href="/register">Register</a>

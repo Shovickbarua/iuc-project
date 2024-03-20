@@ -7,8 +7,8 @@ use App\Models\Booking;
 use App\Models\Contact;
 use App\Models\Room;
 use App\Models\User;
-use Illuminate\Contracts\Session\Session;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class AuthController extends Controller
 {
@@ -52,6 +52,11 @@ class AuthController extends Controller
     public function login()
     {
         return view("login");
+    }
+
+    public function logout(){
+        Session::flush();
+        return redirect(route("home"));
     }
     public function index()
     {
@@ -184,6 +189,6 @@ class AuthController extends Controller
      */
     public function destroy(Auth $auth)
     {
-        //
+       
     }
 }
