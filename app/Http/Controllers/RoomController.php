@@ -29,4 +29,11 @@ class RoomController extends Controller
         $rooms = Room::all();
         return view('rooms_list', compact('rooms'));
     }
+    public function update(Request $request, $id)
+    {
+        $rooms = Room::find($id);
+        $rooms->status = $request->status;
+        $rooms->save();
+        return redirect(route('rooms.index'));
+    }
 }

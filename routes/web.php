@@ -20,8 +20,8 @@ use App\Http\Controllers\RoomController;
 //     return view('welcome');
 // });
 Route::get('/customer', [RoomController::class, 'show'])->name('rooms.show');
+Route::put('/room-updates/{id}', [RoomController::class, 'update'])->name('rooms.update');
 Route::get('/customer/refund/{uuid}', [RoomController::class, 'refund'])->name('rooms.refund');
-
 Route::get('/admin/rooms-list', [RoomController::class, 'index'])->name('rooms.index');
 
 Route::get('/',[AuthController::class,'index'])->name('home');
