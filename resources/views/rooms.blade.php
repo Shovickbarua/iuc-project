@@ -82,10 +82,10 @@
             </div>
         
             <!-- reservation -->
-            <div class="modal fade" id="reservationModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal fade" id="reservationModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             
               
-              <div class="modal-dialog" role="document">
+              <div class="modal-dialog1" role="document1">
                 <form method="POST" action="{{route('book-save')}}" enctype="multipart/form-data">
                   @csrf
                     <div class="modal-content">
@@ -146,7 +146,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="" class=" btn-reservation-close" data-dismiss="modal">Close</button>
-                        <button class=" btn-reservation-reserve"  id="reserveButton" data-dismiss="modal" data-toggle="modal" data-target="#totalAmountModal">Reserve</button>
+                        <button class=" btn-reservation-reserve"  id="reserveButton1" data-dismiss="modal" data-toggle="modal" data-target="#totalAmountModal1">Reserve</button>
                     </div>
                 </div>
                   
@@ -158,11 +158,11 @@
   
             
           <!-- Total Amount Modal -->
-          <div class="modal fade" id="totalAmountModal" tabindex="-1" role="dialog" aria-labelledby="totalAmountModalLabel" aria-hidden="true">
+          <div class="modal fade" id="totalAmountModal1" tabindex="-1" role="dialog" aria-labelledby="totalAmountModalLabel1" aria-hidden="true">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h5 class="modal-title" id="totalAmountModalLabel">Reservation Summary</h5>
+                  <h5 class="modal-title" id="totalAmountModalLabel1">Reservation Summary</h5>
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
@@ -203,7 +203,7 @@
                 </div>
                 <div class="modal-footer">
                   <button type="button" class=" btn-reservation-close" data-dismiss="modal">Close</button>
-                  <button type="button" class=" btn-reservation-reserve"data-dismiss="modal" data-toggle="modal" data-target="#paymentMethodModal">Proceed to Payment</button>
+                  <button type="button" class=" btn-reservation-reserve"data-dismiss="modal" data-toggle="modal" data-target="#paymentMethodModal1">Proceed to Payment</button>
                 </div>
               </div>
             </div>
@@ -213,17 +213,17 @@
 
 
           <!-- Payment Method Modal -->
-          <div class="modal fade" id="paymentMethodModal" tabindex="-1" role="dialog" aria-labelledby="paymentMethodModalLabel" aria-hidden="true">
+          <div class="modal fade" id="paymentMethodModal1" tabindex="-1" role="dialog" aria-labelledby="paymentMethodModalLabel1" aria-hidden="true">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
               <div class="modal-header">
-                <h5 class="modal-title" id="paymentMethodModalLabel">Select Payment Method</h5>
+                <h5 class="modal-title" id="paymentMethodModalLabel1">Select Payment Method</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
               <div class="modal-body">
-                <button type="button" class="btn btn-secondary btn-block bkash-color" data-toggle="modal" data-target="#bkashPaymentModal">Pay with bKash</button>
+                <button type="button" class="btn btn-secondary btn-block bkash-color" data-toggle="modal" data-target="#bkashPaymentModal1">Pay with bKash</button>
                 <button type="submit" class="btn btn-secondary btn-block credit-debit-card-color">Pay with Credit/Debit Card</button>
               </div>
             </div>
@@ -231,11 +231,11 @@
           </div>
         </form>
           <!-- Bkash Payment Method Modal -->
-          <div class="modal fade" id="bkashPaymentModal" tabindex="-1" role="dialog" aria-labelledby="bkashPaymentModalLabel" aria-hidden="true">
+          <div class="modal fade" id="bkashPaymentModal1" tabindex="-1" role="dialog" aria-labelledby="bkashPaymentModalLabel1" aria-hidden="true">
           <div class="modal-dialog" role="document">
           <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="bkashPaymentModalLabel">bKash Payment</h5>
+            <h5 class="modal-title" id="bkashPaymentModalLabel1">bKash Payment</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
@@ -244,7 +244,7 @@
             <p>Please enter your bKash mobile number to proceed with the payment:</p>
             <div class="form-group">
               <label for="bkashMobileNumber">Mobile Number</label>
-              <input type="tel" class="form-control" id="bkashMobileNumber" placeholder="Enter your bKash mobile number" required>
+              <input type="tel" class="form-control" id="bkashMobileNumber1" placeholder="Enter your bKash mobile number" required>
             </div>
           </div>
           <div class="modal-footer">
@@ -332,7 +332,7 @@
       <div class="row">
         <div class="col-md-5 room-slider">
           <!-- Slider Carousel -->
-          <div id="roomSlider1" class="carousel slide pt-3" data-ride="carouse1">
+          <div id="roomSlider2" class="carousel slide pt-3" data-ride="carousel2">
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <img src="{{asset('/')}}dist/asset/image/room-image4.jpg" class="d-block" alt="Image 1">
@@ -345,11 +345,11 @@
               </div>
               <!-- Add more images as needed -->
             </div>
-            <a class="carousel-control-prev" href="#roomSlider1" role="button" data-slide="prev">
+            <a class="carousel-control-prev" href="#roomSlider2" role="button" data-slide="prev">
               <span class="carousel-control-prev-icon  slider-arrow" aria-hidden="true"></span>
               <span class="sr-only">Previous</span>
             </a>
-            <a class="carousel-control-next" href="#roomSlider1" role="button" data-slide="next">
+            <a class="carousel-control-next" href="#roomSlider2" role="button" data-slide="next">
               <span class="carousel-control-next-icon  slider-arrow" aria-hidden="true"></span>
               <span class="sr-only">Next</span>
             </a>
@@ -402,7 +402,7 @@
         </div>
   
         <!-- reservation -->
-        <div class="modal fade" id="reservationModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="reservationModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel2" aria-hidden="true">
         
   
           <div class="modal-dialog" role="document">
@@ -440,7 +440,7 @@
         
                         <div class="form-group">
                           <label for="roomcategory" class="reserve-label">Room No </label>
-                          <select class="form-control" name="roomcategory" id="roomcategory" required>
+                          <select class="form-control" name="roomcategory" id="roomcategory2" required>
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -468,11 +468,11 @@
   
                       <div class="modal-footer">
                         <button type="" class=" btn-reservation-close" data-dismiss="modal">Close</button>
-                        <button type="submit" class=" btn-reservation-reserve"  id="reserveButton"data-dismiss="modal" data-toggle="modal" data-target="#totalAmountModal">Reserve</button>
+                        <button type="submit" class=" btn-reservation-reserve"  id="reserveButton2"data-dismiss="modal" data-toggle="modal" data-target="#totalAmountModal2">Reserve</button>
                     </div>
 
                 </div>
-                  </form>
+                  
 
                 </div>
 
@@ -480,11 +480,11 @@
 
 
               <!-- Total Amount Modal -->
-              <div class="modal fade" id="totalAmountModal" tabindex="-1" role="dialog" aria-labelledby="totalAmountModalLabel" aria-hidden="true">
+              <div class="modal fade" id="totalAmountModal2" tabindex="-1" role="dialog" aria-labelledby="totalAmountModalLabel2" aria-hidden="true">
               <div class="modal-dialog" role="document">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h5 class="modal-title" id="totalAmountModalLabel">Reservation Summary</h5>
+                  <h5 class="modal-title" id="totalAmountModalLabel2">Reservation Summary</h5>
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
@@ -513,41 +513,47 @@
                         </div>
                       </div>
                     </div>
+                    <div class="col-md-12">
+                      <div class="card">
+                        <div class="card-body">
+                          <h5 class="card-title">Enter Amount</h5>
+                          <input type="text" placeholder="Enter your amount" name="amount" class="form-control" id="name">
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn-reservation-close" data-dismiss="modal">Close</button>
-                  <button type="button" class="btn-reservation-reserve"data-dismiss="modal" data-toggle="modal" data-target="#paymentMethodModal">Proceed to Payment</button>
+                  <button type="button" class="btn-reservation-reserve"data-dismiss="modal" data-toggle="modal" data-target="#paymentMethodModal2">Proceed to Payment</button>
                 </div>
               </div>
               </div>
               </div>
-              
-            
               <!-- Payment Method Modal -->
-              <div class="modal fade" id="paymentMethodModal" tabindex="-1" role="dialog" aria-labelledby="paymentMethodModalLabel" aria-hidden="true">
+              <div class="modal fade" id="paymentMethodModal2" tabindex="-1" role="dialog" aria-labelledby="paymentMethodModalLabel2" aria-hidden="true">
               <div class="modal-dialog" role="document">
               <div class="modal-content">
               <div class="modal-header">
-                <h5 class="modal-title" id="paymentMethodModalLabel">Select Payment Method</h5>
+                <h5 class="modal-title" id="paymentMethodModalLabel2">Select Payment Method</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
               <div class="modal-body">
-                <button type="button" class="btn btn-secondary btn-block bkash-color" data-toggle="modal" data-target="#bkashPaymentModal">Pay with bKash</button>
-                <button type="button" class="btn btn-secondary btn-block credit-debit-card-color">Pay with Credit/Debit Card</button>
+                <button type="button" class="btn btn-secondary btn-block bkash-color" data-toggle="modal" data-target="#bkashPaymentModal2">Pay with bKash</button>
+                <button type="submit" class="btn btn-secondary btn-block credit-debit-card-color">Pay with Credit/Debit Card</button>
               </div>
               </div>
               </div>
               </div>
             </form>
               <!-- Bkash Payment Method Modal -->
-              <div class="modal fade" id="bkashPaymentModal" tabindex="-1" role="dialog" aria-labelledby="bkashPaymentModalLabel" aria-hidden="true">
+              <div class="modal fade" id="bkashPaymentModal2" tabindex="-1" role="dialog" aria-labelledby="bkashPaymentModalLabel2" aria-hidden="true">
               <div class="modal-dialog" role="document">
               <div class="modal-content">
               <div class="modal-header">
-              <h5 class="modal-title" id="bkashPaymentModalLabel">bKash Payment</h5>
+              <h5 class="modal-title" id="bkashPaymentModalLabel2">bKash Payment</h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
               </button>
@@ -556,7 +562,7 @@
               <p>Please enter your bKash mobile number to proceed with the payment:</p>
               <div class="form-group">
               <label for="bkashMobileNumber">Mobile Number</label>
-              <input type="tel" class="form-control" id="bkashMobileNumber" placeholder="Enter your bKash mobile number" required>
+              <input type="tel" class="form-control" id="bkashMobileNumber2" placeholder="Enter your bKash mobile number" required>
               </div>
               </div>
               <div class="modal-footer">
@@ -641,7 +647,7 @@
               <div class="row">
                 <div class="col-md-5 room-slider">
                   <!-- Slider Carousel -->
-                  <div id="roomSlider2" class="carousel slide pt-3" data-ride="carousel">
+                  <div id="roomSlider3" class="carousel slide pt-3" data-ride="carousel3">
                     <div class="carousel-inner">
                       <div class="carousel-item active">
                         <img src="{{asset('/')}}dist/asset/image/deluxe room.jpg" class="d-block" alt="Image 1">
@@ -654,11 +660,11 @@
                       </div>
                       <!-- Add more images as needed -->
                     </div>
-                    <a class="carousel-control-prev" href="#roomSlider2" role="button" data-slide="prev">
+                    <a class="carousel-control-prev" href="#roomSlider3" role="button" data-slide="prev">
                       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                       <span class="sr-only">Previous</span>
                     </a>
-                    <a class="carousel-control-next" href="#roomSlider2" role="button" data-slide="next">
+                    <a class="carousel-control-next" href="#roomSlider3" role="button" data-slide="next">
                       <span class="carousel-control-next-icon" aria-hidden="true"></span>
                       <span class="sr-only">Next</span>
                     </a>
@@ -713,7 +719,7 @@
                 </div>
             
                 <!-- reservation -->
-                <div class="modal fade" id="reservationModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal fade" id="reservationModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel3" aria-hidden="true">
                 
                   
                   <div class="modal-dialog" role="document">
@@ -751,7 +757,7 @@
                 
                                 <div class="form-group">
                                   <label for="roomcategory" class="reserve-label">Room No </label>
-                                  <select class="form-control" name="roomcategory" id="roomcategory" required>
+                                  <select class="form-control" name="roomcategory" id="roomcategory3" required>
                                     <option value="1">1</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
@@ -778,7 +784,7 @@
                             </div>
                             <div class="modal-footer">
                               <button type="" class=" btn-reservation-close" data-dismiss="modal">Close</button>
-                              <button type="submit" class=" btn-reservation-reserve"  id="reserveButton"data-dismiss="modal" data-toggle="modal" data-target="#totalAmountModal">Reserve</button>
+                              <button type="submit" class=" btn-reservation-reserve"  id="reserveButton3"data-dismiss="modal" data-toggle="modal" data-target="#totalAmountModal3">Reserve</button>
                           </div>
       
                       </div>
@@ -791,11 +797,11 @@
       
       
                     <!-- Total Amount Modal -->
-                    <div class="modal fade" id="totalAmountModal" tabindex="-1" role="dialog" aria-labelledby="totalAmountModalLabel" aria-hidden="true">
+                    <div class="modal fade" id="totalAmountModal3" tabindex="-1" role="dialog" aria-labelledby="totalAmountModalLabel3" aria-hidden="true">
                     <div class="modal-dialog" role="document">
                     <div class="modal-content">
                       <div class="modal-header">
-                        <h5 class="modal-title" id="totalAmountModalLabel">Reservation Summary</h5>
+                        <h5 class="modal-title" id="totalAmountModalLabel3">Reservation Summary</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                           <span aria-hidden="true">&times;</span>
                         </button>
@@ -824,11 +830,19 @@
                               </div>
                             </div>
                           </div>
+                          <div class="col-md-12">
+                            <div class="card">
+                              <div class="card-body">
+                                <h5 class="card-title">Enter Amount</h5>
+                                <input type="text" placeholder="Enter your amount" name="amount" class="form-control" id="name">
+                              </div>
+                            </div>
+                          </div>
                         </div>
                       </div>
                       <div class="modal-footer">
                         <button type="button" class="btn-reservation-close" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn-reservation-reserve"data-dismiss="modal" data-toggle="modal" data-target="#paymentMethodModal">Proceed to Payment</button>
+                        <button type="button" class="btn-reservation-reserve"data-dismiss="modal" data-toggle="modal" data-target="#paymentMethodModal3">Proceed to Payment</button>
                       </div>
                     </div>
                     </div>
@@ -838,29 +852,29 @@
       
       
                     <!-- Payment Method Modal -->
-                    <div class="modal fade" id="paymentMethodModal" tabindex="-1" role="dialog" aria-labelledby="paymentMethodModalLabel" aria-hidden="true">
+                    <div class="modal fade" id="paymentMethodModal3" tabindex="-1" role="dialog" aria-labelledby="paymentMethodModalLabel3" aria-hidden="true">
                     <div class="modal-dialog" role="document">
                     <div class="modal-content">
                     <div class="modal-header">
-                      <h5 class="modal-title" id="paymentMethodModalLabel">Select Payment Method</h5>
+                      <h5 class="modal-title" id="paymentMethodModalLabel3">Select Payment Method</h5>
                       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                       </button>
                     </div>
                     <div class="modal-body">
-                      <button type="button" class="btn btn-secondary btn-block bkash-color" data-toggle="modal" data-target="#bkashPaymentModal">Pay with bKash</button>
-                      <button type="button" class="btn btn-secondary btn-block credit-debit-card-color">Pay with Credit/Debit Card</button>
+                      <button type="button" class="btn btn-secondary btn-block bkash-color" data-toggle="modal" data-target="#bkashPaymentModal3">Pay with bKash</button>
+                      <button type="submit" class="btn btn-secondary btn-block credit-debit-card-color">Pay with Credit/Debit Card</button>
                     </div>
                     </div>
                     </div>
                     </div>
                   </form>
                     <!-- Bkash Payment Method Modal -->
-                    <div class="modal fade" id="bkashPaymentModal" tabindex="-1" role="dialog" aria-labelledby="bkashPaymentModalLabel" aria-hidden="true">
+                    <div class="modal fade" id="bkashPaymentModal3" tabindex="-1" role="dialog" aria-labelledby="bkashPaymentModalLabel3" aria-hidden="true">
                     <div class="modal-dialog" role="document">
                     <div class="modal-content">
                     <div class="modal-header">
-                    <h5 class="modal-title" id="bkashPaymentModalLabel ">bKash Payment</h5>
+                    <h5 class="modal-title" id="bkashPaymentModalLabel3 ">bKash Payment</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                     </button>
@@ -869,7 +883,7 @@
                     <p>Please enter your bKash mobile number to proceed with the payment:</p>
                     <div class="form-group">
                     <label for="bkashMobileNumber">Mobile Number</label>
-                    <input type="tel" class="form-control" id="bkashMobileNumber" placeholder="Enter your bKash mobile number" required>
+                    <input type="tel" class="form-control" id="bkashMobileNumber3" placeholder="Enter your bKash mobile number" required>
                     </div>
                     </div>
                     <div class="modal-footer">
@@ -954,7 +968,7 @@
         <div class="row">
           <div class="col-md-5 room-slider">
             <!-- Slider Carousel -->
-            <div id="roomSlider3" class="carousel slide pt-3" data-ride="carousel">
+            <div id="roomSlider4" class="carousel slide pt-3" data-ride="carousel4">
               <div class="carousel-inner">
                 <div class="carousel-item active">
                   <img src="{{asset('/')}}dist/asset/image/family room.jpg" class="d-block" alt="Image 1">
@@ -967,11 +981,11 @@
                 </div>
                 <!-- Add more images as needed -->
               </div>
-              <a class="carousel-control-prev" href="#roomSlider3" role="button" data-slide="prev">
+              <a class="carousel-control-prev" href="#roomSlider4" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="sr-only">Previous</span>
               </a>
-              <a class="carousel-control-next" href="#roomSlider3" role="button" data-slide="next">
+              <a class="carousel-control-next" href="#roomSlider4" role="button" data-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="sr-only">Next</span>
               </a>
@@ -1019,13 +1033,13 @@
                  @endif
               </div>
               <div class="col-lg-5 roombook ">
-                <button  type="button" class=" roombook-btn" data-toggle="modal" data-target="#reservationModal5">Book Now</button>
+                <button  type="button" class=" roombook-btn" data-toggle="modal" data-target="#reservationModal4">Book Now</button>
               </div>
             </div>
           </div>
       
           <!-- reservation -->
-          <div class="modal fade" id="reservationModal5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal fade" id="reservationModal4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel4" aria-hidden="true">
           
       
             <div class="modal-dialog" role="document">
@@ -1064,7 +1078,7 @@
           
                           <div class="form-group">
                             <label for="roomcategory" class="reserve-label">Room No </label>
-                            <select class="form-control" name="roomcategory" id="roomcategory" required>
+                            <select class="form-control" name="roomcategory" id="roomcategory4" required>
                               <option value="1">1</option>
                               <option value="2">2</option>
                               <option value="3">3</option>
@@ -1091,7 +1105,7 @@
                       </div>
                       <div class="modal-footer">
                         <button type="" class=" btn-reservation-close" data-dismiss="modal">Close</button>
-                        <button type="submit" class=" btn-reservation-reserve"  id="reserveButton"data-dismiss="modal" data-toggle="modal" data-target="#totalAmountModal">Reserve</button>
+                        <button type="submit" class=" btn-reservation-reserve"  id="reserveButton4" data-dismiss="modal" data-toggle="modal" data-target="#totalAmountModal4">Reserve</button>
                     </div>
 
                 </div>
@@ -1104,11 +1118,11 @@
 
 
               <!-- Total Amount Modal -->
-              <div class="modal fade" id="totalAmountModal" tabindex="-1" role="dialog" aria-labelledby="totalAmountModalLabel" aria-hidden="true">
+              <div class="modal fade" id="totalAmountModal4" tabindex="-1" role="dialog" aria-labelledby="totalAmountModalLabel4" aria-hidden="true">
               <div class="modal-dialog" role="document">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h5 class="modal-title" id="totalAmountModalLabel">Reservation Summary</h5>
+                  <h5 class="modal-title" id="totalAmountModalLabel4">Reservation Summary</h5>
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
@@ -1137,11 +1151,19 @@
                         </div>
                       </div>
                     </div>
+                    <div class="col-md-12">
+                      <div class="card">
+                        <div class="card-body">
+                          <h5 class="card-title">Enter Amount</h5>
+                          <input type="text" placeholder="Enter your amount" name="amount" class="form-control" id="name">
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn-reservation-close" data-dismiss="modal">Close</button>
-                  <button type="button" class="btn-reservation-reserve"data-dismiss="modal" data-toggle="modal" data-target="#paymentMethodModal">Proceed to Payment</button>
+                  <button type="button" class="btn-reservation-reserve"data-dismiss="modal" data-toggle="modal" data-target="#paymentMethodModal4">Proceed to Payment</button>
                 </div>
               </div>
               </div>
@@ -1151,29 +1173,29 @@
 
 
               <!-- Payment Method Modal -->
-              <div class="modal fade" id="paymentMethodModal" tabindex="-1" role="dialog" aria-labelledby="paymentMethodModalLabel" aria-hidden="true">
+              <div class="modal fade" id="paymentMethodModal4" tabindex="-1" role="dialog" aria-labelledby="paymentMethodModalLabel4" aria-hidden="true">
               <div class="modal-dialog" role="document">
               <div class="modal-content">
               <div class="modal-header">
-                <h5 class="modal-title" id="paymentMethodModalLabel">Select Payment Method</h5>
+                <h5 class="modal-title" id="paymentMethodModalLabel4">Select Payment Method</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
               <div class="modal-body">
-                <button type="button" class="btn btn-secondary btn-block bkash-color" data-toggle="modal" data-target="#bkashPaymentModal">Pay with bKash</button>
-                <button type="button" class="btn btn-secondary btn-block credit-debit-card-color">Pay with Credit/Debit Card</button>
+                <button type="button" class="btn btn-secondary btn-block bkash-color" data-toggle="modal" data-target="#bkashPaymentModal4">Pay with bKash</button>
+                <button type="submit" class="btn btn-secondary btn-block credit-debit-card-color">Pay with Credit/Debit Card</button>
               </div>
               </div>
               </div>
               </div>
             </form>
               <!-- Bkash Payment Method Modal -->
-              <div class="modal fade" id="bkashPaymentModal" tabindex="-1" role="dialog" aria-labelledby="bkashPaymentModalLabel" aria-hidden="true">
+              <div class="modal fade" id="bkashPaymentModal4" tabindex="-1" role="dialog" aria-labelledby="bkashPaymentModalLabel4" aria-hidden="true">
               <div class="modal-dialog" role="document">
               <div class="modal-content">
               <div class="modal-header">
-              <h5 class="modal-title" id="bkashPaymentModalLabel">bKash Payment</h5>
+              <h5 class="modal-title" id="bkashPaymentModalLabel4">bKash Payment</h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
               </button>
@@ -1274,7 +1296,7 @@
       <div class="row">
         <div class="col-md-5 room-slider">
           <!-- Slider Carousel -->
-          <div id="roomSlider4" class="carousel slide pt-3" data-ride="carousel">
+          <div id="roomSlider5" class="carousel slide pt-3" data-ride="carousel5">
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <img src="{{asset('/')}}dist/asset/image/room-image1.jpg" class="d-block" alt="Image 1">
@@ -1287,11 +1309,11 @@
               </div>
               <!-- Add more images as needed -->
             </div>
-            <a class="carousel-control-prev" href="#roomSlider4" role="button" data-slide="prev">
+            <a class="carousel-control-prev" href="#roomSlider5" role="button" data-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
               <span class="sr-only">Previous</span>
             </a>
-            <a class="carousel-control-next" href="#roomSlider4" role="button" data-slide="next">
+            <a class="carousel-control-next" href="#roomSlider5" role="button" data-slide="next">
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
               <span class="sr-only">Next</span>
             </a>
@@ -1340,13 +1362,13 @@
                @endif
             </div>
             <div class="col-lg-5 roombook ">
-              <button  type="button" class=" roombook-btn" data-toggle="modal" data-target="#reservationModal6">Book Now</button>
+              <button  type="button" class=" roombook-btn" data-toggle="modal" data-target="#reservationModal5">Book Now</button>
             </div>
           </div>
         </div>
   
         <!-- reservation -->
-        <div class="modal fade" id="reservationModal6" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel6" aria-hidden="true">
+        <div class="modal fade" id="reservationModal5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel5" aria-hidden="true">
         
   
           <div class="modal-dialog" role="document">
@@ -1385,7 +1407,7 @@
         
                         <div class="form-group">
                           <label for="roomcategory" class="reserve-label">Room No </label>
-                          <select class="form-control" name="roomcategory" id="roomcategory" required>
+                          <select class="form-control" name="roomcategory" id="roomcategory5" required>
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -1412,7 +1434,7 @@
                     </div>
                     <div class="modal-footer">
                       <button type="" class=" btn-reservation-close" data-dismiss="modal">Close</button>
-                      <button type="submit" class=" btn-reservation-reserve"  id="reserveButton"data-dismiss="modal" data-toggle="modal" data-target="#totalAmountModal">Reserve</button>
+                      <button type="submit" class=" btn-reservation-reserve"  id="reserveButton5" data-dismiss="modal" data-toggle="modal" data-target="#totalAmountModal5">Reserve</button>
                   </div>
 
               </div>
@@ -1425,11 +1447,11 @@
 
 
             <!-- Total Amount Modal -->
-            <div class="modal fade" id="totalAmountModal" tabindex="-1" role="dialog" aria-labelledby="totalAmountModalLabel" aria-hidden="true">
+            <div class="modal fade" id="totalAmountModal5" tabindex="-1" role="dialog" aria-labelledby="totalAmountModalLabel5" aria-hidden="true">
             <div class="modal-dialog" role="document">
             <div class="modal-content">
               <div class="modal-header">
-                <h5 class="modal-title" id="totalAmountModalLabel">Reservation Summary</h5>
+                <h5 class="modal-title" id="totalAmountModalLabel5">Reservation Summary</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>
@@ -1458,11 +1480,19 @@
                       </div>
                     </div>
                   </div>
+                  <div class="col-md-12">
+                    <div class="card">
+                      <div class="card-body">
+                        <h5 class="card-title">Enter Amount</h5>
+                        <input type="text" placeholder="Enter your amount" name="amount" class="form-control" id="name">
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn-reservation-close" data-dismiss="modal">Close</button>
-                <button type="button" class="btn-reservation-reserve"data-dismiss="modal" data-toggle="modal" data-target="#paymentMethodModal">Proceed to Payment</button>
+                <button type="button" class="btn-reservation-reserve"data-dismiss="modal" data-toggle="modal" data-target="#paymentMethodModal5">Proceed to Payment</button>
               </div>
             </div>
             </div>
@@ -1472,29 +1502,29 @@
 
 
             <!-- Payment Method Modal -->
-            <div class="modal fade" id="paymentMethodModal" tabindex="-1" role="dialog" aria-labelledby="paymentMethodModalLabel" aria-hidden="true">
+            <div class="modal fade" id="paymentMethodModal5" tabindex="-1" role="dialog" aria-labelledby="paymentMethodModalLabel5" aria-hidden="true">
             <div class="modal-dialog" role="document">
             <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="paymentMethodModalLabel">Select Payment Method</h5>
+              <h5 class="modal-title" id="paymentMethodModalLabel5">Select Payment Method</h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
             <div class="modal-body">
-              <button type="button" class="btn btn-secondary btn-block bkash-color" data-toggle="modal" data-target="#bkashPaymentModal">Pay with bKash</button>
-              <button type="button" class="btn btn-secondary btn-block credit-debit-card-color">Pay with Credit/Debit Card</button>
+              <button type="button" class="btn btn-secondary btn-block bkash-color" data-toggle="modal" data-target="#bkashPaymentModal5">Pay with bKash</button>
+              <button type="submit" class="btn btn-secondary btn-block credit-debit-card-color">Pay with Credit/Debit Card</button>
             </div>
             </div>
             </div>
             </div>
           </form>
             <!-- Bkash Payment Method Modal -->
-            <div class="modal fade" id="bkashPaymentModal" tabindex="-1" role="dialog" aria-labelledby="bkashPaymentModalLabel" aria-hidden="true">
+            <div class="modal fade" id="bkashPaymentModal5" tabindex="-1" role="dialog" aria-labelledby="bkashPaymentModalLabel5" aria-hidden="true">
             <div class="modal-dialog" role="document">
             <div class="modal-content">
             <div class="modal-header">
-            <h5 class="modal-title" id="bkashPaymentModalLabel">bKash Payment</h5>
+            <h5 class="modal-title" id="bkashPaymentModalLabel5">bKash Payment</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
             </button>
@@ -1503,7 +1533,7 @@
             <p>Please enter your bKash mobile number to proceed with the payment:</p>
             <div class="form-group">
             <label for="bkashMobileNumber">Mobile Number</label>
-            <input type="tel" class="form-control" id="bkashMobileNumber" placeholder="Enter your bKash mobile number" required>
+            <input type="tel" class="form-control" id="bkashMobileNumber5" placeholder="Enter your bKash mobile number" required>
             </div>
             </div>
             <div class="modal-footer">
@@ -1597,7 +1627,7 @@
     <div class="row">
       <div class="col-md-5 room-slider">
         <!-- Slider Carousel -->
-        <div id="roomSlider5" class="carousel slide pt-3" data-ride="carousel">
+        <div id="roomSlider6" class="carousel slide pt-3" data-ride="carousel6">
           <div class="carousel-inner">
             <div class="carousel-item active">
               <img src="{{asset('/')}}dist/asset/image/luxary room.jpg" class="d-block" alt="Image 1">
@@ -1663,13 +1693,13 @@
              @endif
           </div>
           <div class="col-lg-5 roombook ">
-            <button  type="button" class=" roombook-btn" data-toggle="modal" data-target="#reservationModal8">Book Now</button>
+            <button  type="button" class=" roombook-btn" data-toggle="modal" data-target="#reservationModal6">Book Now</button>
           </div>
         </div>
       </div>
   
       <!-- reservation -->
-      <div class="modal fade" id="reservationModal8" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel8" aria-hidden="true">
+      <div class="modal fade" id="reservationModal6" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel6" aria-hidden="true">
       
   
         <div class="modal-dialog" role="document">
@@ -1708,7 +1738,7 @@
       
                       <div class="form-group">
                         <label for="roomcategory" class="reserve-label">Room No </label>
-                        <select class="form-control" name="roomcategory" id="roomcategory" required>
+                        <select class="form-control" name="roomcategory" id="roomcategory6" required>
                           <option value="1">1</option>
                           <option value="2">2</option>
                           <option value="3">3</option>
@@ -1735,7 +1765,7 @@
                   </div>
                   <div class="modal-footer">
                     <button type="" class=" btn-reservation-close" data-dismiss="modal">Close</button>
-                    <button type="submit" class=" btn-reservation-reserve "  id="reserveButton"data-dismiss="modal" data-toggle="modal" data-target="#totalAmountModal">Reserve</button>
+                    <button type="submit" class=" btn-reservation-reserve "  id="reserveButton6" data-dismiss="modal" data-toggle="modal" data-target="#totalAmountModal6">Reserve</button>
                 </div>
 
             </div>
@@ -1748,11 +1778,11 @@
 
 
           <!-- Total Amount Modal -->
-          <div class="modal fade" id="totalAmountModal" tabindex="-1" role="dialog" aria-labelledby="totalAmountModalLabel" aria-hidden="true">
+          <div class="modal fade" id="totalAmountModal6" tabindex="-1" role="dialog" aria-labelledby="totalAmountModalLabel6" aria-hidden="true">
           <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="totalAmountModalLabel">Reservation Summary</h5>
+              <h5 class="modal-title" id="totalAmountModalLabel6">Reservation Summary</h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
@@ -1781,11 +1811,19 @@
                     </div>
                   </div>
                 </div>
+                <div class="col-md-12">
+                  <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title">Enter Amount</h5>
+                      <input type="text" placeholder="Enter your amount" name="amount" class="form-control" id="name">
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn-reservation-close" data-dismiss="modal">Close</button>
-              <button type="button" class="btn-reservation-reserve"data-dismiss="modal" data-toggle="modal" data-target="#paymentMethodModal">Proceed to Payment</button>
+              <button type="button" class="btn-reservation-reserve"data-dismiss="modal" data-toggle="modal" data-target="#paymentMethodModal6">Proceed to Payment</button>
             </div>
           </div>
           </div>
@@ -1795,29 +1833,29 @@
 
 
           <!-- Payment Method Modal -->
-          <div class="modal fade" id="paymentMethodModal" tabindex="-1" role="dialog" aria-labelledby="paymentMethodModalLabel" aria-hidden="true">
+          <div class="modal fade" id="paymentMethodModal6" tabindex="-1" role="dialog" aria-labelledby="paymentMethodModalLabel6" aria-hidden="true">
           <div class="modal-dialog" role="document">
           <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="paymentMethodModalLabel">Select Payment Method</h5>
+            <h5 class="modal-title" id="paymentMethodModalLabel6">Select Payment Method</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
           <div class="modal-body">
-            <button type="button" class="btn btn-secondary btn-block bkash-color" data-toggle="modal" data-target="#bkashPaymentModal">Pay with bKash</button>
-            <button type="button" class="btn btn-secondary btn-block credit-debit-card-color">Pay with Credit/Debit Card</button>
+            <button type="button" class="btn btn-secondary btn-block bkash-color" data-toggle="modal" data-target="#bkashPaymentModal6">Pay with bKash</button>
+            <button type="submit" class="btn btn-secondary btn-block credit-debit-card-color">Pay with Credit/Debit Card</button>
           </div>
           </div>
           </div>
           </div>
         </form>
           <!-- Bkash Payment Method Modal -->
-          <div class="modal fade" id="bkashPaymentModal" tabindex="-1" role="dialog" aria-labelledby="bkashPaymentModalLabel" aria-hidden="true">
+          <div class="modal fade" id="bkashPaymentModal6" tabindex="-1" role="dialog" aria-labelledby="bkashPaymentModalLabel6" aria-hidden="true">
           <div class="modal-dialog" role="document">
           <div class="modal-content">
           <div class="modal-header">
-          <h5 class="modal-title" id="bkashPaymentModalLabel">bKash Payment</h5>
+          <h5 class="modal-title" id="bkashPaymentModalLabel6">bKash Payment</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
           </button>
@@ -1826,7 +1864,7 @@
           <p>Please enter your bKash mobile number to proceed with the payment:</p>
           <div class="form-group">
           <label for="bkashMobileNumber">Mobile Number</label>
-          <input type="tel" class="form-control" id="bkashMobileNumber" placeholder="Enter your bKash mobile number" required>
+          <input type="tel" class="form-control" id="bkashMobileNumber6" placeholder="Enter your bKash mobile number" required>
           </div>
           </div>
           <div class="modal-footer">
