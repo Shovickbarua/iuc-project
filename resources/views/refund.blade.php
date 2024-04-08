@@ -46,7 +46,7 @@
             <p><strong>Room:</strong> {{ $booking->name }}</p>
             <p><strong>Check-in Date:</strong> {{ $booking->checkInDate }}</p>
             <p><strong>Check-out Date:</strong> {{ $booking->checkOutDate }}</p>
-            <p><strong>Advance Paid:</strong> ${{ $booking->price }}</p>
+            <p><strong>Advance Paid:</strong> ${{ $booking->amount }}</p>
             <p>Are you sure you want to cancel this booking?</p>
             @php
                 $createdAt = \Carbon\Carbon::parse($booking->created_at);

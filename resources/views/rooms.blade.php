@@ -12,7 +12,7 @@
         <div class="row group-room">
           <div class="col-md-5 room-slider">
             <!-- Slider Carousel -->
-            <div id="roomSlider" class="carousel slide pt-1" data-ride="carousel">
+            <div id="roomSlider1" class="carousel slide pt-1" data-ride="carousel">
               <div class="carousel-inner">
                 <div class="carousel-item active">
                   <img src="{{asset('/')}}dist/asset/image/room-image2.jpg" class=" slider-image" alt="Image 1">
@@ -76,16 +76,16 @@
 
                 </div>
                 <div class="col-lg-5 roombook ">
-                  <button  type="button" class=" roombook-btn" data-toggle="modal" data-target="#reservationModal">Book Now</button>
+                  <button  type="button" class=" roombook-btn" data-toggle="modal" data-target="#reservationModal1">Book Now</button>
                 </div>
               </div>
             </div>
         
             <!-- reservation -->
-            <div class="modal fade" id="reservationModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal fade" id="reservationModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel1" aria-hidden="true">
             
               
-              <div class="modal-dialog1" role="document1">
+              <div class="modal-dialog" role="document">
                 <form method="POST" action="{{route('book-save')}}" enctype="multipart/form-data">
                   @csrf
                     <div class="modal-content">

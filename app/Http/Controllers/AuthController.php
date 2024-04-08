@@ -104,8 +104,6 @@ class AuthController extends Controller
         $contact-> message = $request->message;  
         $contact-> save();
 
-        // dd($request);
-
         return redirect(route("contact"));
     }
     public function bookSave(Request $request)
@@ -119,6 +117,7 @@ class AuthController extends Controller
         $book-> roomcategory = $request->roomcategory;  
         $book-> room = $request->room;  
         $book-> price = $request->price * $request->roomcategory;  
+        $book-> amount = $request->amount;  
         $book-> checkInDate = $request->checkInDate;  
         $book-> checkOutDate = $request->checkOutDate;  
         $book-> status = 'pending';

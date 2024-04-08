@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('roomcategory');
             $table->string('room');
             $table->string('price');
+            $table->string('amount');
             $table->string('status');
             $table->string('uuid');
             $table->date('checkInDate');
